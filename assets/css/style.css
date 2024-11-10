@@ -349,8 +349,8 @@ input {
 .home__subtitle {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    margin-bottom: var(--mb-0-75);
-}
+    /* margin-bottom: var(--mb-0-75); */
+} 
 
 .home__description {
     max-width: 450px;
@@ -358,7 +358,7 @@ input {
 }
 
 .my__info {
-    display: flex;
+    display:flex;
     column-gap: 1.8rem;
     position: absolute;
     left: 0;
@@ -382,7 +382,7 @@ input {
 .info__icon {
     font-size: 1.8rem;
     color: var(--skin-color);
-    margin-right: var(--mb-0-75);
+    margin-right: var(--mb-2-5);
 }
 
 /* Buttons */
@@ -411,7 +411,7 @@ input {
     transform-origin: center;
     transform: scale(0);
     border-radius: .25rem;
-    transition: .3s;
+    transition: .4s;
 }
 
 .button:hover::after {
