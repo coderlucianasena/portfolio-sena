@@ -8,6 +8,6 @@
 - Google Fonts: Poppins
 
 
-
-# Faltando
-- Ativar share(compartilhamento);
+# Funcionalidades
+- Tradução PT - EN
+- Share(compartilhamento);
