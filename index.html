@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
+
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Portfolio Luciana Sena</title>
+</head>
+
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <span id="lang-pt" class="lang-option" title="Português">PT</span>
+        <span id="lang-en" class="lang-option" title="English">EN</span>
+    </div>
+
+    <!-- SIDEBAR - NAV VERTICAL -->
+    <div class="nav__toggle" id="nav-toggle">
+        <i class="uil uil-bars"></i>
+    </div>
+    <aside class="sidebar" id="sidebar">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="index.html" class="nav__logo-text">L</a>
+            </div>
+
+            <div class="nav__menu">
+                <div class="menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link" data-lang="home">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link" data-lang="about">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link" data-lang="skills">Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#work" class="nav__link" data-lang="work">Work</a>
+                        </li>
+                        <!-- <li class="nav__item">
+                            <a href="#services" class="nav__link" data-lang="services">Services</a>
+                        </li> -->
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" data-lang="contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn__share">
+                <a href="#"><i class="uil uil-share-alt social__share"></i></a>
+            </div>
+
+            <div class="nav__close" id="nav-close">
+                <i class="uil uil-times"></i>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__social">
+                    <span class="home__social-follow" data-lang="follow">Follow Me</span>
+                    <div class="home__social-links">
+                        <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.github.com/" target="_blank" class="home__social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="home__social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <!-- <a href="https://www.twitch.tv/sk0rp1onqueen" target="_blank" class="home__social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a> -->
+
+                    </div>
+                </div>
+
+                <img src="/assets/img/home-image-ls.png" alt="Imagem da página inicial" class="home__img"
+                    loading="lazy">
+
+                <div class="home__data">
+                    <h1 class="home__title" data-lang="hi">Luciana Sena</h1>
+                    <h3 class="home__subtitle" data-lang="front">Frontend developer</h3>
+                    <p class="home__description" data-lang="description">HTML | CSS | JS | REACT</p>
+                    <a href="#about" class="button" data-lang="user"><i class="uil uil-user button__icon"></i>
+                        More About Me
+                    </a>
+                </div>
+
+                <div class="my__info">
+                    <div class="info-item">
+                        <i class="uil uil-whatsapp info__icon"></i>
+                      
+                        <div>
+                            <h3 class="info__title">Whatsapp</h3>
+                            <span class="info__subtitle">(91) 98123-7058</span>
+                        </div>
+                    </div>
+
+
+                    <div class="info__item">
+                        <div class="info-item">
+                            <i class="uil uil-envelope-edit info__icon"></i>
+
+                            <div>
+                                <h3 class="info__title">Email</h3>
+                                <span class="info__subtitle">coder.lucianasena@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="info__item">
+                        <div class="info-item">
+                            <i class="uil uil-instagram info__icon"></i>
+
+                            <div>
+                                <h3 class="info__title">Instagram</h3>
+                                <span class="info__subtitle">@sena.on</span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+        </section>
+
+        <!-- About -->
+        <section class="about section" id="about">
+            <div>
+                <p class="intro__data" data-lang="intro"></p>
+                <h2 class="section__title" data-lang="aboutme">About Me</h2>
+            </div>
+
+            <div class="about__container container grid">
+                <img src="/assets/img/about-image-ls.png" alt="Imagem sobre mim" class="about__img" loading="lazy">
+
+                <div class="about__data">
+                    <h3 class="about__heading" data-lang="hii">Hi, I'm Luciana Sena!</h3>
+                    <p class="about__description" data-lang="web">Web developer, with extensive knowledge and years of
+                        experience, working in web technologies and Ui / Ux design, delivering quality work.</p>
+                    <div class="about__info grid">
+                        <div class="about__box">
+                            <i class="uil uil-award about__icon"></i>
+                            <h3 class="about__title" data-lang="experience">Experience</h3>
+                            <span class="about__subtitle" data-lang="years">2 + Years</span>
+                        </div>
+
+                        <div class="about__box">
+                            <i class="uil uil-suitcase-alt about__icon"></i>
+                            <h3 class="about__title" data-lang="completed">Completed</h3>
+                            <span class="about__subtitle" data-lang="projects">20 + Projects</span>
+                        </div>
+
+                        <div class="about__box">
+                            <i class="uil uil-headphones-alt about__icon"></i>
+                            <h3 class="about__title" data-lang="support">Support</h3>
+                            <span class="about__subtitle" data-lang="online">Online 24/7</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="button" data-lang="contactme">
+                        Contact Me <i class="uil uil-navigator button__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualification section -->
+        <section class="qualification section">
+            <h2 data-heading="My Journey" class="section__title">Qualification</h2>
+
+            <div class="qualification__container container grid">
+                <div class="education">
+                    <h3 class="qualification__title">
+                        <i class="uil uil-graduation-cap"></i> Education
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="circle__dot"></div>
+                            <h3 class="timeline__title">Wyden</h3>
+                            <p class="timeline__text">Engenharia de Software</p>
+                            <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
+                                2023 - Present
+                            </span>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="circle__dot"></div>
+                                <h3 class="timeline__title">Universidade Estadual de Maringá</h3>
+                                <p class="timeline__text">Licenciatura em Física</p>
+                                <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
+                                    2024 - Present
+                                </span>
+                            </div>
+
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title">Bootcamp Ri Happy</h3>
+                                    <p class="timeline__text">Frontend do Zero</p>
+                                    <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
+                                        2024
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Qualification section -->
+
+                <div class="experience">
+                    <h3 class="qualification__title">
+                        <i class="uil uil-calendar-alt"></i> Experience
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="circle__dot"></div>
+                            <h3 class="timeline__title">Freelance</h3>
+                            <p class="timeline__text">Desenvolvedora Frontend</p>
+                            <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
+                                2023 - Present
+                            </span>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="circle__dot"></div>
+                                <h3 class="timeline__title">Freelance</h3>
+                                <p class="timeline__text">Suporte Técnico</p>
+                                <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
+                                    2022 - Present
+                                </span>
+                            </div>
+
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title">Bootcamp Ri Happy</h3>
+                                    <p class="timeline__text">Front-end do Zero</p>
+                                    <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
+                                        2020 - Present
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work -->
+
+        <!-- ********************************** MixItUp Filter CORRIGIR ***************************************-->
+        <!-- https://www.youtube.com/watch?v=U1sEN3ELIHY&t=5929s -->
+        <div class="portfolio__container container grid">
+            <div class="portfolio__filters">
+                <span class="portfolio__item" data-filter="all">All</span>
+                <span class="portfolio__item" data-filter=".web">Web</span>
+                <span class="portfolio__item" data-filter=".app">App</span>
+                <span class="portfolio__item" data-filter=".design">Design</span>
+            </div>
+
+            <section class="work section" id="work">
+                <div>
+                    <p class="portfolio__data" data-lang="portfolio"></p>
+                    <h2 class="section__title" data-lang="projects">Projetos Recentes</h2>
+                </div>
+
+                <div class="work__container container grid">
+                    <!-- Jucá & Flexa - Advogadas Associadas Website -->
+                    <div class="work__card mix web" data-id="5">
+                        <img src="/assets/img/work-1.webp" alt="Website Jucá & Flexa" class="work__img" loading="lazy">
+                        <h3 class="work__title">Jucá & Flexa - Advogadas Associadas Website</h3>
+                        <span class="work__button">Demo
+                            <i class="uil uil-arrow-right work__button-icon"></i>
+                        </span>
+                        <div class="portfolio__item-details">
+                            <h3 class="details__title">The services provide for design</h3>
+                            <p class="details__description">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting
+                                industry.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>4 dec 2024</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popup para "Jucá & Flexa - Advogadas Associadas Website" -->
+                    <div class="portfolio__popup" id="popup-5">
+                        <div class="portfolio__popup-inner">
+                            <div class="portfolio__popup-content grid">
+                                <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+                                <div class="pp__thumbnail">
+                                    <img src="/assets/img/work-1.webp" alt="Website Jucá & Flexa"
+                                        class="portfolio__popup-img">
+                                </div>
+                                <div class="portfolio__popup-info">
+                                    <div class="portfolio__popup-subtitle">Featured - <span>Website</span></div>
+                                    <div class="portfolio__popup-body">
+                                        <h3 class="details__title">Jucá & Flexa - Advogadas Associadas Website</h3>
+                                        <p class="details__description">Projeto desenvolvido para um escritório de
+                                            advocacia, focado em design moderno e responsivo.</p>
+                                        <ul class="details__info">
+                                            <li>Created - <span>4 dec 2024</span></li>
+                                            <li>Technologies - <span>HTML, CSS, JS</span></li>
+                                            <li>Role - <span>Frontend Developer</span></li>
+                                            <li>View - <span><a href="#" class="www.dominio.com">Website</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Design -->
+                    <div class="work__card mix app" data-id="2">
+                        <img src="/assets/img/work-2.webp" alt="Design de App" class="work__img" loading="lazy">
+                        <h3 class="work__title">App Design</h3>
+                        <span class="work__button">Demo
+                            <i class="uil uil-arrow-right work__button-icon"></i>
+                        </span>
+                        <div class="portfolio__item-details">
+                            <h3 class="details__title">Mobile app landing design & app maintain</h3>
+                            <p class="details__description">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting
+                                industry.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>4 dec 2024</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popup para "App Design" -->
+                    <div class="portfolio__popup" id="popup-2">
+                        <div class="portfolio__popup-inner">
+                            <div class="portfolio__popup-content grid">
+                                <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+                                <div class="pp__thumbnail">
+                                    <img src="/assets/img/work-2.webp" alt="Design de App" class="portfolio__popup-img">
+                                </div>
+                                <div class="portfolio__popup-info">
+                                    <div class="portfolio__popup-subtitle">Featured - <span>App</span></div>
+                                    <div class="portfolio__popup-body">
+                                        <h3 class="details__title">App Design</h3>
+                                        <p class="details__description">Aplicativo mobile focado em interações de
+                                            usuário
+                                            eficientes e design intuitivo.</p>
+                                        <ul class="details__info">
+                                            <li>Created - <span>4 dec 2024</span></li>
+                                            <li>Technologies - <span>HTML, CSS</span></li>
+                                            <li>Role - <span>Frontend Developer</span></li>
+                                            <li>View - <span><a href="#" class="www.dominio.com">Website</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Website -->
+                    <div class="work__card mix design" data-id="3">
+                        <img src="/assets/img/work-3.webp" alt="Website de Jogos" class="work__img" loading="lazy">
+                        <h3 class="work__title">Gaming Website</h3>
+                        <span class="work__button">Demo
+                            <i class="uil uil-arrow-right work__button-icon"></i>
+                        </span>
+                        <div class="portfolio__item-details">
+                            <h3 class="details__title">Logo design creativity & Application</h3>
+                            <p class="details__description">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting
+                                industry.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>9 ago 2024</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popup para "Gaming Website" -->
+                    <div class="portfolio__popup" id="popup-3">
+                        <div class="portfolio__popup-inner">
+                            <div class="portfolio__popup-content grid">
+                                <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+                                <div class="pp__thumbnail">
+                                    <img src="/assets/img/work-3.webp" alt="Website de Jogos"
+                                        class="portfolio__popup-img">
+                                </div>
+                                <div class="portfolio__popup-info">
+                                    <div class="portfolio__popup-subtitle">Featured - <span>Website</span></div>
+                                    <div class="portfolio__popup-body">
+                                        <h3 class="details__title">Gaming Website</h3>
+                                        <p class="details__description">Website de jogos com design criativo e aplicação
+                                            de
+                                            logotipo.</p>
+                                        <ul class="details__info">
+                                            <li>Created - <span>9 ago 2024</span></li>
+                                            <li>Technologies - <span>HTML, CSS</span></li>
+                                            <li>Role - <span>Frontend Developer</span></li>
+                                            <li>View - <span><a href="#" class="www.dominio.com">Website</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Design (Outro) -->
+                    <div class="work__card mix app" data-id="4">
+                        <img src="/assets/img/work-4.webp" alt="Design de App" class="work__img" loading="lazy">
+                        <h3 class="work__title">App Design</h3>
+                        <span class="work__button">Demo
+                            <i class="uil uil-arrow-right work__button-icon"></i>
+                        </span>
+                        <div class="portfolio__item-details">
+                            <h3 class="details__title">Mobile app landing design & Services</h3>
+                            <p class="details__description">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting
+                                industry.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>4 dec 2024</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popup para "App Design" (Outro) -->
+                    <div class="portfolio__popup" id="popup-4">
+                        <div class="portfolio__popup-inner">
+                            <div class="portfolio__popup-content grid">
+                                <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+                                <div class="pp__thumbnail">
+                                    <img src="/assets/img/work-4.webp" alt="Design de App" class="portfolio__popup-img">
+                                </div>
+                                <div class="portfolio__popup-info">
+                                    <div class="portfolio__popup-subtitle">Featured - <span>App</span></div>
+                                    <div class="portfolio__popup-body">
+                                        <h3 class="details__title">App Design</h3>
+                                        <p class="details__description">Design de landing page para aplicativo mobile e
+                                            serviços.</p>
+                                        <ul class="details__info">
+                                            <li>Created - <span>4 dec 2024</span></li>
+                                            <li>Technologies - <span>HTML, CSS</span></li>
+                                            <li>Role - <span>Frontend Developer</span></li>
+                                            <li>View - <span><a href="#" class="www.dominio.com">Website</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Website - AMDI -->
+                    <div class="work__card mix web" data-id="1">
+                        <img src="/assets/img/work-5.webp" alt="Website AMDI" class="work__img" loading="lazy">
+                        <h3 class="work__title">Website - AMDI</h3>
+                        <span class="work__button">Demo
+                            <i class="uil uil-arrow-right work__button-icon"></i>
+                        </span>
+                        <div class="portfolio__item-details">
+                            <h3 class="details__title">Website AMDI</h3>
+                            <p class="details__description">Este projeto foi desenvolvido conforme as especificações
+                                detalhadas do cliente, seguindo rigorosamente todas as orientações e preferências
+                                solicitadas.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>4 dec 2024</span></li>
+                                <li>Technologies - <span>HTML, CSS e JS</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popup para "Website - AMDI" -->
+                    <div class="portfolio__popup" id="popup-1">
+                        <div class="portfolio__popup-inner">
+                            <div class="portfolio__popup-content grid">
+                                <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+                                <div class="pp__thumbnail">
+                                    <img src="/assets/img/work-5.webp" alt="Website AMDI" class="portfolio__popup-img">
+                                </div>
+                                <div class="portfolio__popup-info">
+                                    <div class="portfolio__popup-subtitle">Featured - <span>Website</span></div>
+                                    <div class="portfolio__popup-body">
+                                        <h3 class="details__title">Website - AMDI</h3>
+                                        <p class="details__description">Este projeto foi desenvolvido conforme as
+                                            especificações detalhadas do cliente, seguindo rigorosamente todas as
+                                            orientações e preferências solicitadas.</p>
+                                        <ul class="details__info">
+                                            <li>Created - <span>4 dec 2024</span></li>
+                                            <li>Technologies - <span>HTML, CSS, JS</span></li>
+                                            <li>Role - <span>Frontend Developer</span></li>
+                                            <li>View - <span><a href="#" class="www.dominio.com">Website</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SpaceX Website -->
+                    <div class="work__card mix design" data-id="6">
+                        <img src="/assets/img/work-6.webp" alt="Website SpaceX" class="work__img" loading="lazy">
+                        <h3 class="work__title">SpaceX Website</h3>
+                        <span class="work__button">Demo
+                            <i class="uil uil-arrow-right work__button-icon"></i>
+                        </span>
+                        <div class="portfolio__item-details">
+                            <h3 class="details__title">App for technology & Services</h3>
+                            <p class="details__description">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting
+                                industry.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>4 dec 2024</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popup para "SpaceX Website" -->
+                    <div class="portfolio__popup" id="popup-6">
+                        <div class="portfolio__popup-inner">
+                            <div class="portfolio__popup-content grid">
+                                <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+                                <div class="pp__thumbnail">
+                                    <img src="/assets/img/work-6.webp" alt="Website SpaceX"
+                                        class="portfolio__popup-img">
+                                </div>
+                                <div class="portfolio__popup-info">
+                                    <div class="portfolio__popup-subtitle">Featured - <span>Website</span></div>
+                                    <div class="portfolio__popup-body">
+                                        <h3 class="details__title">SpaceX Website</h3>
+                                        <p class="details__description">App para tecnologia e serviços, com design
+                                            moderno e
+                                            responsivo.</p>
+                                        <ul class="details__info">
+                                            <li>Created - <span>4 dec 2024</span></li>
+                                            <li>Technologies - <span>HTML, CSS</span></li>
+                                            <li>Role - <span>Frontend Developer</span></li>
+                                            <li>View - <span><a href="#" class="www.dominio.com">Website</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <!-- <section class="testimonials section">
+            <div>
+                <p class="testimonials__data" data-lang="testimonials"></p>
+                <h2 class="section__title" data-lang="clients">Testimonials</h2>
+            </div>
+
+            <div class="testimonials__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial__description" data-lang="testimonialDescription"> </p>
+                        <h3 class="testimonial__date" data-date="2024-03-27">March 27. 2024</h3>
+                        <div class="testimonial__profile">
+                            <img src="/assets/img/client1.jpg" alt="" class="testimonial__profile-img" loading="lazy">
+
+                            <div class="testimonial__profile-data">
+                                <span class="testimonial__profile-name">Nome Sobrenome</span>
+                                <span class="testimonail__profile-detail" data-lang="director">Director of a
+                                    company</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial__description" data-lang="testimonialDescription"> </p>
+                        <h3 class="testimonial__date" data-date="2024-03-27">March 27. 2024</h3>
+                        <div class="testimonial__profile">
+                            <img src="/assets/img/client2.jpg" alt="" class="testimonial__profile-img" loading="lazy">
+
+                            <div class="testimonial__profile-data">
+                                <span class="testimonial__profile-name">Nome Sobrenome</span>
+                                <span class="testimonail__profile-detail" data-lang="director">Director of a
+                                    company</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial__description" data-lang="testimonialDescription"> </p>
+                        <h3 class="testimonial__date" data-date="2024-03-27">March 27. 2024</h3>
+                        <div class="testimonial__profile">
+                            <img src="/assets/img/client3.jpg" alt="" class="testimonial__profile-img" loading="lazy">
+
+                            <div class="testimonial__profile-data">
+                                <span class="testimonial__profile-name">Nome Sobrenome</span>
+                                <span class="testimonail__profile-detail" data-lang="director">Director of a
+                                    company</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section> -->
+
+            <!-- Contact -->
+            <section class="contact section" id="contact">
+                <div>
+                    <p class="contact__data" data-lang="getcontact"></p>
+                    <h2 class="section__title" data-lang="contact">Contact</h2>
+                </div>
+
+                <div class="contact__container container">
+                    <div class="contact__content">
+                        <div class="contact__info">
+                            <div class="contact__card">
+                                <i class="uil uil-envelope-edit contact__card-icon"></i>
+                                <h3 class="contact__card-title">Email</h3>
+                                <span class="contact__card-data">coder.lucianasena@gmail.com</span>
+                                <span class="contact__button" data-lang="Write">
+                                    Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                                </span>
+                            </div>
+                            <div class="contact__card">
+                                <i class="uil uil-whatsapp contact__card-icon"></i>
+                                <h3 class="contact__card-title">Whatsapp</h3>
+                                <span class="contact__card-data">+55 (91) 98123-7058</span>
+                                <span class="contact__button" data-lang="Write">
+                                    Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                                </span>
+                            </div>
+
+                            <!-- <div class="contact__card">
+                            <i class="uil uil-discord contact__card-icon"></i>
+                            <h3 class="contact__card-title">Discord</h3>
+                            <span class="contact__card-data">coder.lucianasena</span>
+                            <span class="contact__button" href="https://discord.com/login">
+                                Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer__bg">
+                    <div class="footer__container container grid">
+                        <div>
+                            <h1 class="footer__title">Luciana Sena</h1>
+                            <span class="footer__subtitle" data-lang="front">Frontend developer</span>
+                        </div>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#home" class="footer__link" data-lang="services">Home</a>
+                            </li>
+                            <li>
+                                <a href="#work" class="footer__link" data-lang="work">Work</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="footer__link" data-lang="contact">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="footer__socials">
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="footer__social">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://www.github.com/" target="_blank" class="footer__social">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                            <!-- <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="footer__social">
+                            <i class="uil uil-behance-alt"></i>
+                        </a> -->
+                        </div>
+                    </div>
+
+                    <p class="footer__copy" data-lang="copyright">&#169; Luciana Sena. All rights reserved</p>
+                </div>
+            </footer>
+    </main>
+
+    <!-- SCROLL UP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+
+    <!-- MIXITUP FILTER -->
+    <script src="/assets/js/mixitup.min.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/share.js"></script>
+</body>
+
+</html>

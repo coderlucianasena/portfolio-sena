@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Meu portfólio pessoal",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/send.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3"
+  }
+}
