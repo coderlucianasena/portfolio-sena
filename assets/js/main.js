@@ -20,26 +20,26 @@ if (navClose) {
 }
 
 // #### SKILLS TABS ####
-// Skills Toggle
-const skillHeaders = document.querySelectorAll('.skills__header');
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContent = document.querySelectorAll('[data-content]')
 
-skillHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        const content = document.querySelector(header.dataset.target);
-        const arrow = header.querySelector('.skills__arrow');
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        const target = document.querySelector(tab.dataset.target)
 
-        if (content.classList.contains('skills__active')) {
-            content.classList.remove('skills__active');
-            header.classList.remove('skills__active');
-        } else {
-            document.querySelectorAll('.skills__group').forEach(group => group.classList.remove('skills__active'));
-            document.querySelectorAll('.skills__header').forEach(header => header.classList.remove('skills__active'));
+        tabContent.forEach(tabContents => {
+            tabContents.classList.remove("skills__active")
+        })
 
-            content.classList.add('skills__active');
-            header.classList.add('skills__active');
-        }
-    });
-});
+        target.classList.add('skills__active')
+
+        tabs.forEach(t => {
+            t.classList.remove("skills__active")
+        })
+
+        tab.classList.add('skills__active')
+    })
+})
 
 // MIXITUP FILTER PORTFOLIO
 let mixerPortfolio = mixitup('.work__container', {
@@ -132,25 +132,6 @@ let swiper = new Swiper(".testimonials__container", {
     },
 });
 
-// INPUT ANIMATION
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus");
-}
-
-function blurFunc() {
-    let parent = this.parentNode;
-    if (this.value == "") {
-        parent.classList.remove("focus");
-    }
-}
-
-inputs.forEach((input) => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
-})
 // SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll("section[id]");
 

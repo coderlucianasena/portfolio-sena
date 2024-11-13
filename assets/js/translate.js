@@ -2,12 +2,6 @@ const langEn = document.getElementById('lang-en');
 const langPt = document.getElementById('lang-pt');
 const elementsToTranslate = document.querySelectorAll('[data-lang]');
 
-// elementsToTranslate.forEach(element => {
-//     const key = element.getAttribute('data-lang');
-//     element.innerHTML = translations[lang][key]; // Usar innerHTML para interpretar o <br>
-// });
-
-
 const translations = {
     en: {
         home: 'Home',
@@ -33,7 +27,8 @@ const translations = {
         clients: 'My clients say',
         getcontact: 'Get in touch',
         hii: "Hello, World! My name is Luciana Sena.",
-        web: 'I am a front-end developer, continuously building my knowledge in creating interactive, accessible, and visually appealing interfaces. With skills in HTML5, CSS3, JavaScript (ES6+), and React, I am always learning and applying new techniques to develop responsive and optimized applications. Passionate about solving problems through technology, my goal is to deliver efficient solutions that provide intuitive and high-quality user experiences, with a focus on innovation and continuous improvement.',
+        web: 'I am a front-end developer, continuously building my knowledge in creating interactive, accessible, and visually appealing interfaces. With skills in HTML5, CSS3, JavaScript (ES6+), and React, I am always learning and applying new techniques to develop responsive and optimized applications.', 
+        // Passionate about solving problems through technology, my goal is to deliver efficient solutions that provide intuitive and high-quality user experiences, with a focus on innovation and continuous improvement.',
         years: '2 + Years',
         completed: 'Completed',
         projects: '20 + Projects',
@@ -77,7 +72,8 @@ const translations = {
         clients: 'Depoimentos',
         getcontact: 'Entre em contato',
         hii: 'Olá, Mundo! Me chamo Luciana Sena.',
-        web: 'Sou desenvolvedora front-end, constantemente construindo conhecimento na criação de interfaces interativas, acessíveis e visualmente atraentes. Com habilidades em HTML5, CSS3, JavaScript (ES6+) e React, estou sempre aprendendo e aplicando novas técnicas para desenvolver aplicações responsivas e otimizadas. Apaixonada por resolver problemas através da tecnologia, meu objetivo é entregar soluções eficientes, que proporcionem uma experiência de usuário intuitiva e de qualidade, sempre focada em inovação e melhoria contínua.',
+        web: 'Sou desenvolvedora front-end, constantemente construindo conhecimento na criação de interfaces interativas, acessíveis e visualmente atraentes. Com habilidades em HTML5, CSS3, JavaScript (ES6+) e React, estou sempre aprendendo e aplicando novas técnicas para desenvolver aplicações responsivas e otimizadas.', 
+        // Apaixonada por resolver problemas através da tecnologia, meu objetivo é entregar soluções eficientes, que proporcionem uma experiência de usuário intuitiva e de qualidade, sempre focada em inovação e melhoria contínua.*/',
         years: '2 + Anos',
         completed: 'Concluído',
         projects: '20 + Projetos',
@@ -110,10 +106,9 @@ function formatDate(dateString, lang) {
 function setLanguage(lang) {
     elementsToTranslate.forEach(element => {
         const key = element.getAttribute('data-lang');
-        element.textContent = translations[lang][key];
+        element.textContent = translations[lang][key] || translations['en'][key] || key;
     });
 
-    // Atualizar datas formatadas
     document.querySelectorAll('.testimonial__date').forEach(element => {
         const originalDate = element.getAttribute('data-date');
         const formattedDate = formatDate(originalDate, lang);
@@ -123,18 +118,35 @@ function setLanguage(lang) {
     document.body.classList.remove('lang-en', 'lang-pt');
     document.body.classList.add(`lang-${lang}`);
 
-    // Atualizar a classe ativa no seletor de idioma
-    if (lang === 'en') {
-        langEn.classList.add('active');
-        langPt.classList.remove('active');
-    } else {
-        langPt.classList.add('active');
-        langEn.classList.remove('active');
+    langEn.classList.toggle('active', lang === 'en');
+    langPt.classList.toggle('active', lang === 'pt');
+
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+function detectLanguage() {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        return savedLang;
     }
+    const browserLang = navigator.language || navigator.userLanguage;
+    return browserLang.startsWith('pt') ? 'pt' : 'en';
 }
 
 langPt.addEventListener('click', () => setLanguage('pt'));
 langEn.addEventListener('click', () => setLanguage('en'));
 
-// Set default language
-setLanguage('pt');
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    const initialLang = detectLanguage();
+    setLanguage(initialLang);
+});
+
+// Função para carregar traduções adicionais (exemplo de lazy loading)
+function loadAdditionalTranslations(lang) {
+    return fetch(`/translations/${lang}.json`)
+        .then(response => response.json())
+        .then(additionalTranslations => {
+            translations[lang] = { ...translations[lang], ...additionalTranslations };
+        });
+}

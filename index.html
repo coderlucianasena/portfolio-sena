@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luciana Sena - Desenvolvedora Frontend. Portfólio com projetos">
 
     <!-- FAVICON -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
 
-    <!-- UNICONS -->
+    <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -21,21 +22,30 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/qualification.css">
+    <link rel="stylesheet" href="assets/css/work.css">
+    <link rel="stylesheet" href="assets/css/testimonials.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
 
     <title>Portfolio Luciana Sena</title>
 </head>
 
 <body>
     <!-- Language Selector -->
-    <div class="language-selector">
+    <!-- <div class="language-selector">
         <span id="lang-pt" class="lang-option" title="Português">PT</span>
         <span id="lang-en" class="lang-option" title="English">EN</span>
-    </div>
+    </div> -->
 
     <!-- SIDEBAR - NAV VERTICAL -->
-    <div class="nav__toggle" id="nav-toggle">
+    <!-- <div class="nav__toggle" id="nav-toggle">
         <i class="uil uil-bars"></i>
-    </div>
+    </div> -->
     <aside class="sidebar" id="sidebar">
         <nav class="nav">
             <div class="nav__logo">
@@ -57,9 +67,9 @@
                         <li class="nav__item">
                             <a href="#work" class="nav__link" data-lang="work">Work</a>
                         </li>
-                        <!-- <li class="nav__item">
+                        <li class="nav__item">
                             <a href="#services" class="nav__link" data-lang="services">Services</a>
-                        </li> -->
+                        </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link" data-lang="contact">Contact</a>
                         </li>
@@ -77,9 +87,9 @@
         </nav>
     </aside>
 
-    <!-- MAIN -->
+    <!--========== MAIN ==========-->
     <main class="main">
-        <!-- Home -->
+        <!--==== Home ====-->
         <section class="home" id="home">
             <div class="home__container container grid">
                 <div class="home__social">
@@ -98,13 +108,12 @@
                             <i class="fab fa-youtube"></i>
                         </a>
                         <a href="https://www.twitch.tv/sk0rp1onqueen" target="_blank" class="home__social-link">
-                            <i class="fab fa-twitch"></i> 45:56
+                            <i class="fab fa-twitch"></i>
                         </a>
-
                     </div>
                 </div>
 
-                <img src="/assets/img/home-image-qd-ls.png" alt="Imagem da página inicial" class="home__img"
+                <img src="/assets/img/home-image-ls.webp" alt="Imagem da página inicial" class="home__img"
                     loading="lazy">
 
                 <div class="home__data">
@@ -136,6 +145,7 @@
                                 <span class="info__subtitle">coder.lucianasena@gmail.com</span>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- <div class="info__item">
@@ -152,27 +162,23 @@
                 </div>
         </section>
 
-        <!-- About -->
+        <!--==== About ====-->
         <section class="about section" id="about">
             <div>
                 <p class="intro__data" data-lang="intro"></p>
-                <h2 class="section__title" data-lang="aboutme">About Me</h2>
+                <h2 class="section__title" data-lang="aboutme">Sobre mim</h2>
             </div>
 
             <div class="about__container container grid">
-                <img src="/assets/img/about-image-ls.png" alt="Imagem sobre mim" class="about__img" loading="lazy">
-
+                <img src="/assets/img/about-img.webp" alt="Imagem sobre mim" class="about__img" loading="lazy">
                 <div class="about__data">
-                    <h3 class="about__heading" data-lang="hii">Hello, World! I'm Luciana Sena!</h3>
-                    <p class="about__description" data-lang="web">Sou desenvolvedora front-end, constantemente
-                        construindo conhecimento na criação de interfaces interativas, acessíveis e visualmente
-                        atraentes. Com habilidades em HTML5, CSS3, JavaScript (ES6+) e React, estou sempre aprendendo e
-                        aplicando novas técnicas para desenvolver aplicações responsivas e otimizadas. Apaixonada por
-                        resolver problemas através da tecnologia, meu objetivo é entregar soluções eficientes, que
-                        proporcionem uma experiência de usuário intuitiva e de qualidade, sempre focada em inovação e
-                        melhoria contínua.</p>
+                    <h3 class="about__heading" data-lang="hii">Olá, Mundo! Sou Luciana Sena!</h3>
+                    <p class="about__description" data-lang="web">Sou desenvolvedora front-end, meu foco é criar
+                        interfaces interativas, acessíveis e atraentes. Tenho habilidades em HTML5, CSS3, JavaScript
+                        (ES6+) e React. Estou em constante aprendizado para entregar soluções eficientes e inovadoras,
+                        garantindo uma experiência de usuário intuitiva e de qualidade. </p>
 
-                        <div class="about__info grid">
+                    <div class="about__info grid">
                         <div class="about__box">
                             <i class="uil uil-award about__icon"></i>
                             <h3 class="about__title" data-lang="experience">Experience</h3>
@@ -200,12 +206,12 @@
 
         <!-- Qualification section -->
         <section class="qualification section">
-            <h2 data-heading="My Journey" class="section__title">Qualification</h2>
+            <h2 data-heading="My Journey" class="section__title">Qualificação</h2>
 
             <div class="qualification__container container grid">
                 <div class="education">
                     <h3 class="qualification__title">
-                        <i class="uil uil-graduation-cap"></i> Education
+                        <i class="uil uil-graduation-cap"></i> Educação
                     </h3>
 
                     <div class="timeline">
@@ -245,9 +251,8 @@
 
                 <div class="experience">
                     <h3 class="qualification__title">
-                        <i class="uil uil-calendar-alt"></i> Experience
+                        <i class="uil uil-calendar-alt"></i> Experiência
                     </h3>
-
                     <div class="timeline">
                         <div class="timeline__item">
                             <div class="circle__dot"></div>
@@ -264,17 +269,17 @@
                                 <h3 class="timeline__title">Freelance</h3>
                                 <p class="timeline__text">Suporte Técnico</p>
                                 <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                                    2022 - Present
+                                    2021 - Present
                                 </span>
                             </div>
 
                             <div class="timeline">
                                 <div class="timeline__item">
                                     <div class="circle__dot"></div>
-                                    <h3 class="timeline__title">Bootcamp Ri Happy</h3>
-                                    <p class="timeline__text">Front-end do Zero</p>
+                                    <h3 class="timeline__title">Auxiliar Técnico de Informática</h3>
+                                    <p class="timeline__text">Caravelas Automação Comercial</p>
                                     <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                                        2020 - Present
+                                        2020
                                     </span>
                                 </div>
                             </div>
@@ -283,12 +288,193 @@
                 </div>
             </div>
         </section>
+        <!--==== Skills ====-->
+        <section class="skills section" id="skills">
+            <h2 data-heading="My Abilities" class="section__title">Experiência</h2>
+
+            <div class="skills__container container grid">
+                <div class="skills__tabs">
+                    <div class="skills__header skills__active" data-target="#frontend">
+                        <i class="uil uil-brackets-curly skills__icon"></i>
+
+                        <div>
+                            <h1 class="skills__title">Desenvolvedora Frontend</h1>
+                            <span class="skills__subtitle">Mais de 2 anos</span>
+                        </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__header" data-target="#design">
+                        <i class="uil uil-swatchbook skills__icon"></i>
+
+                        <div>
+                            <h1 class="skills__title">UX/UI design</h1>
+                            <span class="skills__subtitle">Mais de 1 ano</span>
+                        </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__header" data-target="#backend">
+                        <i class="uil uil-server-network skills__icon"></i>
+
+                        <div>
+                            <h1 class="skills__title">Desenvolvedora Backend</h1>
+                            <span class="skills__subtitle">Mais de 1 ano</span>
+                        </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <div class="skills__group skills__active" data-content id="frontend">
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML5</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS3</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">TypeScript</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="skills__group" data-content id="design">
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Figma</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Canva</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Photoshop</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="skills__group" data-content id="backend">
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Node.js</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 50%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 50%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Firebase</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 50%;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- Work -->
 
         <!-- ********************************** MixItUp Filter CORRIGIR ***************************************-->
         <!-- https://www.youtube.com/watch?v=U1sEN3ELIHY&t=5929s -->
-        <div class="portfolio__container container grid">
+        <!-- <div class="portfolio__container container grid">
             <div class="portfolio__filters">
                 <span class="portfolio__item" data-filter="all">All</span>
                 <span class="portfolio__item" data-filter=".web">Web</span>
@@ -302,10 +488,10 @@
                     <h2 class="section__title" data-lang="projects">Projetos Recentes</h2>
                 </div>
 
-                <div class="work__container container grid">
-                    <!-- Jucá & Flexa - Advogadas Associadas Website -->
-                    <div class="work__card mix web" data-id="5">
-                        <img src="/assets/img/work-1.webp" alt="Website Jucá & Flexa" class="work__img" loading="lazy">
+                <div class="work__container container grid"> -->
+        <!-- Jucá & Flexa - Advogadas Associadas Website -->
+        <!-- <div class="work__card mix web" data-id="5"> -->
+        <!-- <img src="/assets/img/work-1.webp" alt="Website Jucá & Flexa" class="work__img" loading="lazy">
                         <h3 class="work__title">Jucá & Flexa - Advogadas Associadas Website</h3>
                         <span class="work__button">Demo
                             <i class="uil uil-arrow-right work__button-icon"></i>
@@ -322,10 +508,10 @@
                                 <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Popup para "Jucá & Flexa - Advogadas Associadas Website" -->
-                    <div class="portfolio__popup" id="popup-5">
+        <!-- Popup para "Jucá & Flexa - Advogadas Associadas Website" -->
+        <!-- <div class="portfolio__popup" id="popup-5">
                         <div class="portfolio__popup-inner">
                             <div class="portfolio__popup-content grid">
                                 <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
@@ -349,10 +535,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- App Design -->
-                    <div class="work__card mix app" data-id="2">
+        <!-- App Design -->
+        <!-- <div class="work__card mix app" data-id="2">
                         <img src="/assets/img/work-2.webp" alt="Design de App" class="work__img" loading="lazy">
                         <h3 class="work__title">App Design</h3>
                         <span class="work__button">Demo
@@ -370,10 +556,10 @@
                                 <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Popup para "App Design" -->
-                    <div class="portfolio__popup" id="popup-2">
+        <!-- Popup para "App Design" -->
+        <!-- <div class="portfolio__popup" id="popup-2">
                         <div class="portfolio__popup-inner">
                             <div class="portfolio__popup-content grid">
                                 <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
@@ -397,10 +583,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Gaming Website -->
-                    <div class="work__card mix design" data-id="3">
+        <!-- Gaming Website -->
+        <!-- <div class="work__card mix design" data-id="3">
                         <img src="/assets/img/work-3.webp" alt="Website de Jogos" class="work__img" loading="lazy">
                         <h3 class="work__title">Gaming Website</h3>
                         <span class="work__button">Demo
@@ -418,10 +604,10 @@
                                 <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Popup para "Gaming Website" -->
-                    <div class="portfolio__popup" id="popup-3">
+        <!-- Popup para "Gaming Website" -->
+        <!-- <div class="portfolio__popup" id="popup-3">
                         <div class="portfolio__popup-inner">
                             <div class="portfolio__popup-content grid">
                                 <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
@@ -446,10 +632,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- App Design (Outro) -->
-                    <div class="work__card mix app" data-id="4">
+        <!-- App Design (Outro) -->
+        <!-- <div class="work__card mix app" data-id="4">
                         <img src="/assets/img/work-4.webp" alt="Design de App" class="work__img" loading="lazy">
                         <h3 class="work__title">App Design</h3>
                         <span class="work__button">Demo
@@ -467,10 +653,10 @@
                                 <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Popup para "App Design" (Outro) -->
-                    <div class="portfolio__popup" id="popup-4">
+        <!-- Popup para "App Design" (Outro) -->
+        <!-- <div class="portfolio__popup" id="popup-4">
                         <div class="portfolio__popup-inner">
                             <div class="portfolio__popup-content grid">
                                 <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
@@ -493,10 +679,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Website - AMDI -->
-                    <div class="work__card mix web" data-id="1">
+        <!-- Website - AMDI -->
+        <!-- <div class="work__card mix web" data-id="1">
                         <img src="/assets/img/work-5.webp" alt="Website AMDI" class="work__img" loading="lazy">
                         <h3 class="work__title">Website - AMDI</h3>
                         <span class="work__button">Demo
@@ -514,10 +700,10 @@
                                 <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Popup para "Website - AMDI" -->
-                    <div class="portfolio__popup" id="popup-1">
+        <!-- Popup para "Website - AMDI" -->
+        <!-- <div class="portfolio__popup" id="popup-1">
                         <div class="portfolio__popup-inner">
                             <div class="portfolio__popup-content grid">
                                 <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
@@ -541,10 +727,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- SpaceX Website -->
-                    <div class="work__card mix design" data-id="6">
+        <!-- SpaceX Website -->
+        <!-- <div class="work__card mix design" data-id="6">
                         <img src="/assets/img/work-6.webp" alt="Website SpaceX" class="work__img" loading="lazy">
                         <h3 class="work__title">SpaceX Website</h3>
                         <span class="work__button">Demo
@@ -562,10 +748,10 @@
                                 <li>View - <span><a href="#" class="www.dominio.com"></a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Popup para "SpaceX Website" -->
-                    <div class="portfolio__popup" id="popup-6">
+        <!-- Popup para "SpaceX Website" -->
+        <!-- <div class="portfolio__popup" id="popup-6">
                         <div class="portfolio__popup-inner">
                             <div class="portfolio__popup-content grid">
                                 <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
@@ -592,10 +778,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-            <!-- Testimonials -->
-            <!-- <section class="testimonials section">
+        <!-- Testimonials -->
+        <!-- <section class="testimonials section">
             <div>
                 <p class="testimonials__data" data-lang="testimonials"></p>
                 <h2 class="section__title" data-lang="clients">Testimonials</h2>
@@ -658,8 +844,8 @@
             </div>
         </section> -->
 
-            <!-- Contact -->
-            <section class="contact section" id="contact">
+        <!-- Contact -->
+        <!-- <section class="contact section" id="contact">
                 <div>
                     <p class="contact__data" data-lang="getcontact"></p>
                     <h2 class="section__title" data-lang="contact">Contact</h2>
@@ -693,13 +879,13 @@
                                 Write me <i class="uil uil-arrow-right contact__button-icon"></i>
                             </span>
                         </div> -->
-                        </div>
+        <!-- </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-            <!-- FOOTER -->
-            <footer class="footer">
+        <!-- FOOTER -->
+        <!-- <footer class="footer">
                 <div class="footer__bg">
                     <div class="footer__container container grid">
                         <div>
@@ -732,12 +918,12 @@
                             <!-- <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="footer__social">
                             <i class="uil uil-behance-alt"></i>
                         </a> -->
-                        </div>
+        <!-- </div>
                     </div>
 
                     <p class="footer__copy" data-lang="copyright">&#169; Luciana Sena. All rights reserved</p>
                 </div>
-            </footer>
+            </footer> -->
     </main>
 
     <!-- SCROLL UP -->
@@ -751,9 +937,8 @@
 
     <!-- JS -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/translate.js"></script>
-    <script src="assets/js/share.js"></script>
+    <!-- <script src="assets/js/translate.js"></script>
+    <script src="assets/js/share.js"></script> -->
 </body>
 
 </html>
