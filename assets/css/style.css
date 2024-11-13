@@ -561,7 +561,6 @@ input {
 
  /*====== Skills Section ======  */
 .skills__container {
-    /* display: flex;  */
     grid-template-columns: 360px 320px;
     column-gap: 3rem;
     justify-content: center;
