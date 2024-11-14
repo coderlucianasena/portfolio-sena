@@ -738,16 +738,16 @@ body.lang-pt .nav__link {
     padding: 0 0.8rem;
 }
 
-/* #### Work Section #### 
-.work__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+ /* #### Work Section ####  */
+    .work__container {
+    /* display: grid; */
+    grid-template-columns: repeat(3, 330px);
     gap: 1.8rem;
     justify-content: center;
     padding-top: 1rem;
-}
+} 
 
-.work__filters {
+ .work__filters {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -799,10 +799,10 @@ body.lang-pt .nav__link {
 }
 
 .work__button:hover .work__button-icon {
-    transform: translate(.25rem);
-}
+    transform: translateX(.25rem);
+} 
 
-/* Active Item Work 
+/* Active Item Work */
 .active-work {
     background-color: var(--skin-color);
     color: var(--title-color);
