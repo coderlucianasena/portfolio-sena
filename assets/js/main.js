@@ -1,25 +1,23 @@
-// #### SHOW SIDEBAR ####
+/*====== SHOW SIDEBAR ======*/
 const navMenu = document.getElementById('sidebar'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close');
 
-// ## SIDEBAR SHOW ##
-// Validate If Constant Exists
+/*====== SIDEBAR SHOW ======*/
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-sidebar')
     })
 }
 
-// ## SIDEBAR HIDDEN ##
-// Validate If Constant Exists
+/*====== SIDEBAR HIDDEN ======*/
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-sidebar')
     })
 }
 
-// #### SKILLS TABS ####
+/*====== SKILLS TABS ======*/
 const tabs = document.querySelectorAll('[data-target]'),
       tabContent = document.querySelectorAll('[data-content]')
 
@@ -41,7 +39,7 @@ tabs.forEach(tab => {
     })
 })
 
-// MIXITUP FILTER PORTFOLIO
+/*====== MIXITUP FILTER PORTFOLIO ======*/
 let mixerPortfolio = mixitup('.work__container', {
     selectors: {
         target: '.work__card'
@@ -54,7 +52,7 @@ let mixerPortfolio = mixitup('.work__container', {
     }
 });
 
-// Adicionando funcionalidade de filtro ao clicar nos filtros
+// Adiciona funcionalidade de filtro ao clicar nos filtros
 document.querySelectorAll('.portfolio__item').forEach((filterBtn) => {
     filterBtn.addEventListener('click', function () {
         let filterValue = this.getAttribute('data-filter');
@@ -63,7 +61,7 @@ document.querySelectorAll('.portfolio__item').forEach((filterBtn) => {
 });
 
 
-// Link Active Work
+/*====== Link Active Work ======*/
 const linkWork = document.querySelectorAll('.work__item')
 
 function activeWork() {
@@ -73,85 +71,73 @@ function activeWork() {
 
 linkWork.forEach(l => l.addEventListener('click', activeWork));
 
-// Work Popup
+/*====== Work Popup ======*/
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains('work__button')) {
-        const portfolioItem = e.target.closest('.work__card');
-        const popupId = portfolioItem.getAttribute('data-id'); // Obtém o data-id do item de portfólio
-        togglePortfolioPopup(popupId);
-        portfolioItemDetails(portfolioItem, popupId);
+        togglePortfolioPopup();
+        portfolioItemDetails(e.target.parentElement);
     }
 });
 
-function togglePortfolioPopup(popupId) {
-    const popup = document.querySelector(`#popup-${popupId}`);
-    if (popup) {
-        popup.classList.toggle("open");
-    }
+function togglePortfolioPopup () {
+    document.querySelector('.portfolio__popup').classList.toggle('open');
 }
 
-document.querySelectorAll(".portfolio__popup-close").forEach(closeBtn => {
-    closeBtn.addEventListener("click", () => {
-        const popup = closeBtn.closest('.portfolio__popup');
-        if (popup) {
-            popup.classList.remove("open");
-        }
-    });
-});
+document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup)
 
-function portfolioItemDetails(portfolioItem, popupId) {
-    const imgSrc = portfolioItem.querySelector(".work__img").src;
-    const title = portfolioItem.querySelector(".work__title").innerHTML;
-    const details = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+/*====== Details ======*/
 
-    const popup = document.querySelector(`#popup-${popupId}`);
-    if (popup) {
-        popup.querySelector(".pp__thumbnail img").src = imgSrc;
-        popup.querySelector(".portfolio__popup-subtitle span").innerHTML = title;
-        popup.querySelector(".portfolio__popup-body").innerHTML = details;
-    }
+function portfolioItemDetails(portfolioItem) {
+    // Seleciona a imagem
+    document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector("img").src;
+
+    // Seleciona o título
+    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
+
+    // Seleciona os detalhes
+    document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
 }
 
 // SWIPER TESTIMONIAL
-let swiper = new Swiper(".testimonials__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
-        },
-    },
-});
+// let swiper = new Swiper(".testimonials__container", {
+//     spaceBetween: 24,
+//     loop: true,
+//     grabCursor: true,
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//     },
+//     breakpoints: {
+//         576: {
+//             slidesPerView: 2,
+//         },
+//         768: {
+//             slidesPerView: 2,
+//             spaceBetween: 48,
+//         },
+//     },
+// });
 
 // SCROLL SECTIONS ACTIVE LINK
-const sections = document.querySelectorAll("section[id]");
+// const sections = document.querySelectorAll("section[id]");
 
-window.addEventListener("scroll", navHighlighter);
+// window.addEventListener("scroll", navHighlighter);
 
-function navHighlighter() {
-    let scrollY = window.pageYOffset;
+// function navHighlighter() {
+//     let scrollY = window.pageYOffset;
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50,
-            sectionId = current.getAttribute("id");
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector(".nav li a[href*=" + sectionId + "]").classList.add("active-link")
-        }
-        else {
-            document.querySelector(".nav li a[href*=" + sectionId + "]").classList.remove("active-link")
-        }
-    })
-}
+//     sections.forEach(current => {
+//         const sectionHeight = current.offsetHeight;
+//         const sectionTop = current.offsetTop - 50,
+//             sectionId = current.getAttribute("id");
+//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.add("active-link")
+//         }
+//         else {
+//             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.remove("active-link")
+//         }
+//     })
+// }
 
 // SHOW SCROLL UP
 

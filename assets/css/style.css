@@ -808,7 +808,7 @@ body.lang-pt .nav__link {
     color: var(--title-color);
 }
 
-/* Portfolio Popup 
+/* Portfolio Popup */
 .portfolio__popup {
     position: fixed;
     top: 0;
@@ -826,7 +826,7 @@ body.lang-pt .nav__link {
     transition: .3s;
 }
 
-.portfolio__popup.open {
+ .portfolio__popup.open {
     opacity: 1;
     visibility: visible;
 }
@@ -854,9 +854,11 @@ body.lang-pt .nav__link {
     cursor: pointer;
 }
 
+
 .portfolio__popup-img {
     border-radius: .5rem;
 }
+
 
 .portfolio__popup-subtitle {
     font-size: var(--small-font-size);
@@ -864,7 +866,7 @@ body.lang-pt .nav__link {
 }
 
 .details__title {
-    font-size: var(--h1-font-size);
+    font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1);
 }
@@ -893,6 +895,10 @@ body.lang-pt .nav__link {
     color: var(--skin-color);
 }
 
+.portfolio__popup.open .portfolio__item-details {
+    display: block; /* Exibe os detalhes do item quando o popup está aberto */
+}
+ 
 
 /* #### Services Section #### 
 .services__container {
