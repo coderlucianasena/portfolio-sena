@@ -900,7 +900,7 @@ body.lang-pt .nav__link {
 }
  
 
-/* #### Services Section #### 
+ /* #### Services Section ####  */
 .services__container {
     grid-template-columns: repeat(3, 250px);
     justify-content: center;
@@ -960,6 +960,11 @@ body.lang-pt .nav__link {
     opacity: 0;
     visibility: hidden;
     transition: .3s;
+}
+
+.services__modal.active-modal {
+    opacity: 1;
+    visibility: visible;
 }
 
 .services__modal-content {
