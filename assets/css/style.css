@@ -1494,7 +1494,7 @@ textarea.input {
 }
 
 /* For Medium Devices  */
-/* @media screen and (min-width: 992px) {
+ @media screen and (min-width: 992px) {
     .testimonials__container {
         width: 750px;
         margin-left: auto !important;
@@ -1505,9 +1505,9 @@ textarea.input {
         flex-direction: column;
         align-items: center;
     }
-} */
+} 
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .about__img {
         width: 250px;
     }
@@ -1592,18 +1592,18 @@ textarea.input {
 
     .portfolio__popup-close {
         top: .5rem;
-    }
+    } */
 
     /* .language-selector .lang-option {
         right: 4rem;
     } */
 
-    .contact__info {
+    /* .contact__info {
         flex-direction: row;
     }
-}
+} */
 
-/* @media screen and (max-width: 767px) {
+ @media screen and (max-width: 767px) {
     .about__img {
         width: 250px;
     }
@@ -1693,9 +1693,9 @@ textarea.input {
     .language-selector .lang-option {
         right: 4rem;
     }
-} */
+} 
 
-@media screen and (max-width: 576px) {
+ @media screen and (max-width: 576px) {
     .nav__toggle {
         right: initial;
         left: 1.5rem;
@@ -1770,7 +1770,7 @@ textarea.input {
 
     .footer__links {
         justify-self: flex-start;
-    }
+    } 
 
     /* .language-selector .lang-option {
         right: -1rem;
@@ -1778,7 +1778,7 @@ textarea.input {
     } */
 }
 
-/* /* For Small Devices  */
+/* For Small Devices  */
 @media screen and (max-width: 350px) {
     .container {
         margin-left: var(--mb-1);
@@ -1829,7 +1829,7 @@ textarea.input {
         padding-right: 3.5rem;
     }
 }
-
+/* 
 @media screen and (max-width: 768px){
     .nav__toggle {
         right: initial;
@@ -1915,9 +1915,9 @@ textarea.input {
         right: -1rem;
         font-size: var(--smaller-font-size);
     }
-}
+} */
 
-@media screen and (max-width: 820px){
+/* @media screen and (max-width: 820px){
     .nav__toggle {
         right: initial;
         left: 1.5rem;
@@ -2008,7 +2008,7 @@ textarea.input {
         right: -1rem;
         font-size: var(--smaller-font-size);
     }
-}
+} */
 
 
 
