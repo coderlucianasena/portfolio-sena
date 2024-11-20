@@ -122,45 +122,45 @@ modalCloses.forEach((modalClose) => {
 });
 
 // SWIPER TESTIMONIAL
-// let swiper = new Swiper(".testimonials__container", {
-//     spaceBetween: 24,
-//     loop: true,
-//     grabCursor: true,
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     breakpoints: {
-//         576: {
-//             slidesPerView: 2,
-//         },
-//         768: {
-//             slidesPerView: 2,
-//             spaceBetween: 48,
-//         },
-//     },
-// });
+ let swiper = new Swiper(".testimonials__container", {
+     spaceBetween: 24,
+     loop: true,
+     grabCursor: true,
+     pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+     },
+     breakpoints: {
+         576: {
+             slidesPerView: 2,
+         },
+         768: {
+             slidesPerView: 2,
+             spaceBetween: 48,
+         },
+     },
+ });
 
 // SCROLL SECTIONS ACTIVE LINK
-// const sections = document.querySelectorAll("section[id]");
+ const sections = document.querySelectorAll("section[id]");
 
-// window.addEventListener("scroll", navHighlighter);
+ window.addEventListener("scroll", navHighlighter);
 
-// function navHighlighter() {
-//     let scrollY = window.pageYOffset;
+ function navHighlighter() {
+     let scrollY = window.pageYOffset;
 
-//     sections.forEach(current => {
-//         const sectionHeight = current.offsetHeight;
-//         const sectionTop = current.offsetTop - 50,
-//             sectionId = current.getAttribute("id");
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.add("active-link")
-//         }
-//         else {
-//             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.remove("active-link")
-//         }
-//     })
-// }
+     sections.forEach(current => {
+         const sectionHeight = current.offsetHeight;
+         const sectionTop = current.offsetTop - 50,
+             sectionId = current.getAttribute("id");
+         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.add("active-link")
+         }
+         else {
+             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.remove("active-link")
+         }
+     })
+ }
 
 // SHOW SCROLL UP
 
