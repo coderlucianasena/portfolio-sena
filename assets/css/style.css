@@ -80,7 +80,7 @@ input {
 body {
     background-color: var(--body-color);
     color: var(--text-color);
-    /*   overflow-x: hidden  verificar */
+    overflow-x: hidden;
 }
 
 h1,
@@ -115,7 +115,14 @@ input {
 
 /* LAYOUT */
 .container {
-    max-width: 1250px;
+    max-width: 968px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+      /*  max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
     /* padding: 0 1rem; 
@@ -301,6 +308,7 @@ input {
     position: relative;
     height: 100%;
     align-items: center;
+    row-gap: 7rem;
     /*  overflow: hidden;  Evita o overflow horizontal */
 }
 
@@ -1493,6 +1501,20 @@ textarea.input {
     } */
 }
 
+@media screen and (max-width: 968px) {
+    .home__content {
+        grid-template-columns: .5fr 3fr;
+        padding-top: 3.5rem;
+    }
+    .home__img {
+        order: initial;
+        justify-self: initial;
+    }
+    .home__data {
+        grid-column: 1/3;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .about__img {
         width: 250px;
@@ -1584,6 +1606,42 @@ textarea.input {
         right: 4rem;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
+}
+
+    .home__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .home__img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .home__scroll {
+        display: none;
+    }
 
  @media screen and (max-width: 576px) {
     .nav__toggle {
@@ -1948,11 +2006,9 @@ textarea.input {
 
     .home__img {
         width: 100%;
-        max-width: 400px;
         height: auto;
-        object-fit: cover;
-        margin: 0 auto 10px;
-        display: block;
+        max-width: 300px;
+        justify-self: center;
     }
 
     .home__data {
