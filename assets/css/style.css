@@ -1919,11 +1919,11 @@ textarea.input {
     }
 
     .home__title {
-        font-size: var(--h1-font-size);
+        font-size: var(--small-font-size);
     }
 
     .home__subtitle {
-        font-size: var(--normal-font-size);
+        font-size: var(--small-font-size);
     }
 
     .about__info {
@@ -1939,7 +1939,7 @@ textarea.input {
     }
 
     .skills__title {
-        font-size: var(--normal-font-size);
+        font-size: var(--small-font-size);
     }
 
     .work__item {
@@ -1947,7 +1947,7 @@ textarea.input {
     }
 
     .work__filters {
-        column-gap: .25rem;
+        column-gap: .10rem;
     }
 
     .services__container {
@@ -1955,7 +1955,7 @@ textarea.input {
     }
 
     .services__content {
-        padding-right: 3.5rem;
+        padding-right: 1.5rem;
     }
 }
 
