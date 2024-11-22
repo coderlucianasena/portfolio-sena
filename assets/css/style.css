@@ -1954,7 +1954,7 @@ textarea.input {
 
     .home__img {
         width: 100%; /* Aumenta a imagem para ocupar mais espaço */
-        max-width: 200px; /* Define um tamanho máximo */
+        max-width: 400px; /* Define um tamanho máximo */
         height: auto;
         margin-bottom: 10px;
     }
