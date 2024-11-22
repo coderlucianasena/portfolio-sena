@@ -1914,6 +1914,9 @@ textarea.input {
         background-color: var(--body-color);
         color: var(--text-color);
         font-family: var(--body-font);
+        overflow-x: hidden; /* Desativa o scroll horizontal */
+        margin: 0;
+        padding: 0;
     }
 
     /* Navegação */
@@ -1937,6 +1940,14 @@ textarea.input {
     }
 
     /* Home */
+    .home__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+    }
+
     .home__title {
         color: var(--title-color);
         font-size: 1rem;
@@ -1950,6 +1961,13 @@ textarea.input {
     .home__social-link {
         color: var(--skin-color);
         font-size: 0.8rem;
+    }
+
+    .home__img {
+        width: 80%; /* Aumenta a imagem para ocupar mais espaço */
+        max-width: 150px; /* Define um tamanho máximo */
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .button {
