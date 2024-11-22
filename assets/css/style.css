@@ -1910,12 +1910,12 @@ textarea.input {
 
 @media screen and (max-width: 210px) {
     .container {
-        margin-left: var(--mb-1);
-        margin-right: var(--mb-1);
+        margin-left: var(--mb-0-5);
+        margin-right: var(--mb-0-5);
     }
 
     .home__img {
-        width: 200px;
+        width: 100px;
     }
 
     .home__title {
@@ -1927,8 +1927,8 @@ textarea.input {
     }
 
     .about__info {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: .5rem;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: .3rem;
     }
 
     .contact__container,
