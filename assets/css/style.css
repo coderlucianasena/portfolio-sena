@@ -1920,13 +1920,8 @@ textarea.input {
     }
 
     /* Navegação */
-    .nav__toggle, .nav__close {
-        color: var(--skin-color);
-        font-size: 1.2rem;
-    }
-
-    .sidebar {
-        background-color: var(--body-color);
+    .nav__toggle, .nav__close, .sidebar, .nav__menu {
+        display: none; /* Oculta o menu de navegação */
     }
 
     .nav__logo-text {
@@ -1934,16 +1929,13 @@ textarea.input {
         font-size: 1rem;
     }
 
-    .nav__link {
-        color: var(--text-color);
-        font-size: 0.7rem;
-    }
-
     /* Home */
     .home__container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        height: 100vh; /* Ocupa toda a altura da tela */
         padding: 10px;
         text-align: center;
     }
@@ -1951,23 +1943,25 @@ textarea.input {
     .home__title {
         color: var(--title-color);
         font-size: 1rem;
+        margin-bottom: 5px;
     }
 
     .home__subtitle {
         color: var(--text-color);
         font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .home__img {
+        width: 100%; /* Aumenta a imagem para ocupar mais espaço */
+        max-width: 200px; /* Define um tamanho máximo */
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .home__social-link {
         color: var(--skin-color);
         font-size: 0.8rem;
-    }
-
-    .home__img {
-        width: 80%; /* Aumenta a imagem para ocupar mais espaço */
-        max-width: 150px; /* Define um tamanho máximo */
-        height: auto;
-        margin-bottom: 10px;
     }
 
     .button {
