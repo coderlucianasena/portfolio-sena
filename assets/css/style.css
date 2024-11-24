@@ -67,7 +67,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* overflow-x: hidden;  Evita o overflow horizontal */
+     overflow-x: hidden; /* Evita o overflow horizontal */
 }
 
 body,
