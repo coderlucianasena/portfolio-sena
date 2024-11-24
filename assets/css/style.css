@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
     /*====== Colors ======*/
@@ -63,6 +63,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-display: swap;
 }
 
 html {
@@ -379,6 +380,25 @@ input {
 .info__title,
 .info__subtitle {
     font-size: var(--small-font-size);
+}
+
+.phone-link {
+    color: inherit; 
+    text-decoration: none;
+    
+}
+
+.phone-link:hover {
+    font-weight: bold; 
+}
+
+.email-link {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.email-link:hover {
+    font-weight: bold; 
 }
 
 .info__title {

@@ -20,17 +20,10 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/sidebar.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="assets/css/qualification.css">
-    <link rel="stylesheet" href="assets/css/work.css">
-    <link rel="stylesheet" href="assets/css/testimonials.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-
 
     <title>Portfolio Luciana Sena</title>
 </head>
@@ -70,9 +63,9 @@
                         <!-- <li class="nav__item">
                             <a href="#services" class="nav__link" data-lang="services">Serviços</a>
                         </li> -->
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="#testimonials" class="nav__link" data-lang="testimonials">Depoimentos</a>
-                        </li>
+                        </li> -->
                         <li class="nav__item">
                             <a href="#contact" class="nav__link" data-lang="contact">Contato</a>
                         </li>
@@ -98,7 +91,8 @@
                 <div class="home__social">
                     <span class="home__social-follow" data-lang="follow">Siga-me</span>
                     <div class="home__social-links">
-                        <a href="https://www.linkedin.com/in/luciana-sena-frontend/" target="_blank" class="home__social-link">
+                        <a href="https://www.linkedin.com/in/luciana-sena-frontend/" target="_blank"
+                            class="home__social-link">
                             <i class="fab fa-linkedin"></i>
                         </a>
                         <a href="https://github.com/coderlucianasena" target="_blank" class="home__social-link">
@@ -125,7 +119,7 @@
                 <div class="home__data">
                     <h2 class="home__title" data-lang="hi">Luciana Sena</h2>
                     <h3 class="home__subtitle" data-lang="front">Desenvolvedora Frontend</h3>
-                    <p class="home__description" data-lang="description">HTML | CSS | JS | REACT</p>
+                    <p class="home__description" data-lang="description">HTML5 | CSS3 | JS | REACT</p>
                     <a href="#about" class="button" data-lang="user"><i class="uil uil-user button__icon"></i>
                         Sobre Mim
                     </a>
@@ -137,7 +131,9 @@
 
                         <div>
                             <h3 class="info__title">Whatsapp</h3>
-                            <span class="info__subtitle">(91) 98123-7058</span>
+                            <span class="info__subtitle">
+                                <a href="https://wa.me/message/W2QO2R2P4SCKP1" class="phone-link">(91) 98123-7058</a>
+                            </span>
                         </div>
                     </div>
 
@@ -148,7 +144,10 @@
 
                             <div>
                                 <h3 class="info__title">Email</h3>
-                                <span class="info__subtitle">coder.lucianasena@gmail.com</span>
+                                <span class="info__subtitle">
+                                    <a href="mailto:coder.lucianasena@gmail.com"
+                                        class="email-link">coder.lucianasena@gmail.com</a>
+                                </span>
                             </div>
                         </div>
 
@@ -165,15 +164,16 @@
                         </div>
                     </div> -->
                 </div>
-                </div>
+            </div>
         </section>
 
         <!--==== About ====-->
         <section class="about section" id="about">
-            <div>
+            <!-- <div>
                 <p class="intro__data" data-lang="intro"></p>
                 <h2 class="section__title" data-lang="aboutme">Sobre mim</h2>
-            </div>
+            </div> -->
+            <h2 data-heading="Introdução" class="section__title">Sobre mim</h2>
 
             <div class="about__container container grid">
                 <img src="/assets/img/about-img.webp" alt="Imagem sobre mim" class="about__img" loading="lazy">
@@ -199,12 +199,12 @@
 
                         <div class="about__box">
                             <i class="uil uil-headphones-alt about__icon"></i>
-                            <h3 class="about__title" data-lang="support">Assistência Contínua</h3>
+                            <h3 class="about__title" data-lang="support">Assistência</h3>
                             <span class="about__subtitle" data-lang="online">Suporte Personalizado</span>
                         </div>
                     </div>
                     <a href="#contact" class="button" data-lang="contactme">
-                        Contact Me <i class="uil uil-navigator button__icon"></i>
+                        Entre em contato <i class="uil uil-navigator button__icon"></i>
                     </a>
                 </div>
             </div>
@@ -212,7 +212,7 @@
 
         <!-- Qualification section -->
         <section class="qualification section">
-            <h2 data-heading="My Journey" class="section__title">Qualificação</h2>
+            <h2 data-heading="Jornada" class="section__title">Qualificação</h2>
 
             <div class="qualification__container container grid">
                 <div class="education">
@@ -297,7 +297,7 @@
 
         <!--==== Skills ====-->
         <section class="skills section" id="skills">
-            <h2 data-heading="My Abilities" class="section__title">Experiência</h2>
+            <h2 data-heading="Habilidades" class="section__title">Experiência</h2>
 
             <div class="skills__container container grid">
                 <div class="skills__tabs">
@@ -479,7 +479,7 @@
 
         <!-- ********************************** MixItUp Filter ***************************************-->
         <section class="work section" id="work">
-            <h2 data-heading="My Portfolio" class="section__title">Trabalhos Recentes</h2>
+            <h2 data-heading="Portfólio" class="section__title">Trabalhos Recentes</h2>
 
             <div class="work__filters">
                 <span class="work__item active-work" data-filter="all">Todos</span>
@@ -498,7 +498,8 @@
                     </span>
                     <div class="portfolio__item-details">
                         <h3 class="details__title">Trabalhos Feitos</h3>
-                        <p class="details__description">Site Jucá Flexa Advogadas Associadas criado sob demanda de acordo com as especificações da cliente</p>
+                        <p class="details__description">Site Jucá Flexa Advogadas Associadas criado sob demanda de
+                            acordo com as especificações da cliente</p>
                         <ul class="details__info">
                             <li>Criado - <span>Novembro 2024</span></li>
                             <li>Tecnologias - <span>HTML CSS JS</span></li>
@@ -577,7 +578,7 @@
                     </span>
                     <div class="portfolio__item-details">
                         <h3 class="details__title">Trabalhos Feitos</h3>
-                        <p class="details__description">Projeto feito para 
+                        <p class="details__description">Projeto feito para
                             Advogadas Associadas</p>
                         <ul class="details__info">
                             <li>Criado - <span>Outubro 2024</span></li>
@@ -620,24 +621,24 @@
                     </div>
                     <div class="portfolio__popup-info">
                         <div class="portfolio__popup-body">
-                            <h3 class="work__title">Brand Design</h3> 
+                            <h3 class="work__title">Brand Design</h3>
                             <div class="portfolio__popup-subtitle"> <!--Funcionalidade - --><span>Design</span> </div>
-                                <span class="work__button"> <!-- Ver mais 
+                            <span class="work__button"> <!-- Ver mais 
                                 <i class="uil uil-arrow-right work__button-icon"></i> -->
-                                </span>
-                                <div class="portfolio__item-details">
-                                    <h3 class="details__title">Projetos feitos com foco no estudo </h3>
-                                    <p class="details__description">Projeto feito para escritório de advocacia -
-                                        Cassandra
-                                        Jucá
-                                        Advogadas Associadas</p>
-                                    <ul class="details__info">
-                                        <li>Criado - <span>Outubro 2024</span></li>
-                                        <li>Tecnologias - <span>HTML5 CSS3 JS</span></li>
-                                        <li>Função - <span>Frontend</span></li>
-                                        <li>Link - <span><a href="#">www.domain.com</a></span></li>
-                                    </ul>
-                                </div>
+                            </span>
+                            <div class="portfolio__item-details">
+                                <h3 class="details__title">Projetos feitos com foco no estudo </h3>
+                                <p class="details__description">Projeto feito para escritório de advocacia -
+                                    Cassandra
+                                    Jucá
+                                    Advogadas Associadas</p>
+                                <ul class="details__info">
+                                    <li>Criado - <span>Outubro 2024</span></li>
+                                    <li>Tecnologias - <span>HTML5 CSS3 JS</span></li>
+                                    <li>Função - <span>Frontend</span></li>
+                                    <li>Link - <span><a href="#">www.domain.com</a></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -679,8 +680,8 @@
                 </div>
             </div> -->
 
-            <!-- Modal de Serviços -->
-            <!-- <div class="services__modal">
+        <!-- Modal de Serviços -->
+        <!-- <div class="services__modal">
                 <div class="services__modal-content">
                     <i class="uil uil-times services__modal-close"></i>
                     <h3 class="services__modal-title">UI/UX Designer</h3>
@@ -713,14 +714,14 @@
         </section> -->
 
         <!-- Testimonials -->
-        <section class="testimonials section" id="testimonials">
-            <h2 data-heading="O que meus clientes dizem" class="section__title">Depoimentos</h2>
-            <!-- <div>
+        <!-- <section class="testimonials section" id="testimonials">
+            <h2 data-heading="O que meus clientes dizem" class="section__title">Depoimentos</h2> -->
+        <!-- <div>
                 <p class="testimonials__data" data-lang="testimonials"></p>
                 <h2 class="section__title" data-lang="clients">Testimonials</h2>
             </div> -->
 
-            <div class="testimonials__container container swiper">
+        <!-- <div class="testimonials__container container swiper">
                 <div class="swiper-wrapper">
                     <div class="testimonial__card swiper-slide">
                         <div class="testimonial__quote">
@@ -775,7 +776,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Contact -->
         <section class="contact section" id="contact">
@@ -788,20 +789,20 @@
             <div class="contact__container container">
                 <div class="contact__content">
                     <div class="contact__info">
-                        <div class="contact__card">
+                        <!-- <div class="contact__card">
                             <i class="uil uil-envelope-edit contact__card-icon"></i>
                             <h3 class="contact__card-title">Email</h3>
                             <span class="contact__card-data">coder.lucianasena@gmail.com</span>
-                            <span class="contact__button" data-lang="Write">
-                                Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                            <span class="contact__button contact_email" data-lang="Write">
+                                Entre em contato <i class="uil uil-arrow-right contact__button-icon"></i>
                             </span>
-                        </div>
+                        </div> -->
                         <div class="contact__card">
                             <i class="uil uil-whatsapp contact__card-icon"></i>
                             <h3 class="contact__card-title">Whatsapp</h3>
                             <span class="contact__card-data">+55 (91) 98123-7058</span>
-                            <span class="contact__button" data-lang="Write">
-                                Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                            <span class="contact__button contact_phone" data-lang="Write">
+                                Entre em contato <i class="uil uil-arrow-right contact__button-icon"></i>
                             </span>
                         </div>
 
@@ -832,23 +833,33 @@
                             <a href="#home" class="footer__link" data-lang="services">Início</a>
                         </li>
                         <li>
-                            <a href="#work" class="footer__link" data-lang="work">Trabalhos</a>
+                            <a href="#about" class="footer__link" data-lang="work">Sobre</a>
                         </li>
                         <li>
-                            <a href="#contact" class="footer__link" data-lang="contato">Contato</a>
+                            <a href="#work" class="footer__link" data-lang="contato">Trabalhos</a>
                         </li>
                     </ul>
-
                     <div class="footer__socials">
-                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="footer__social">
+                        <a href="https://www.linkedin.com/in/luciana-sena-frontend/" target="_blank" class="footer__social">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
-                        <a href="https://www.github.com/" target="_blank" class="footer__social">
+                        
+                        <a href="https://github.com/coderlucianasena" target="_blank" class="footer__social">
                             <i class="uil uil-github-alt"></i>
                         </a>
+
+                        <a href="https://www.instagram.com/sena.on/" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@codersena" target="_blank" class="footer__social">
+                            <i class="uil uil-youtube"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@coder.sena" target="_blank" class="footer__social">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+
                         <!-- <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="footer__social">
                             <i class="uil uil-behance-alt"></i>
                         </a> -->

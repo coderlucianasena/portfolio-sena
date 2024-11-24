@@ -164,3 +164,9 @@ modalCloses.forEach((modalClose) => {
 
 // SHOW SCROLL UP
 
+// CONTATO
+
+document.querySelector('.contact_phone').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.open('https://wa.me/5591981237058', '_blank');
+});
