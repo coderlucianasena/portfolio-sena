@@ -167,15 +167,15 @@ input {
     transition: .5s;
 }
 
-/*
+
 .btn__share a {
-    color: white;  Garante que o ícone inicie com a cor branca 
+    color: white; /*  Garante que o ícone inicie com a cor branca */
     text-decoration: none;
-} */
-/*
+} 
+
 .btn__share a:hover {
-    color: var(--skin-color);  Muda a cor no hover
-}  */
+    color: var(--skin-color); /* Muda a cor no hover */
+}  
 
 .nav__logo {
     position: absolute;
@@ -771,7 +771,7 @@ body.lang-pt .nav__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: .75rem;
+    /* column-gap: .75rem; */
     margin-bottom: 2rem;
 }
 
@@ -1396,7 +1396,7 @@ textarea.input {
 
 @media screen and (max-width: 1024px) {
     .container {
-        margin-left: var(--mb-1-5);
+        /* margin-left: var(--mb-1-5); */
         margin-right: var(--mb-1-5);
     }
 
