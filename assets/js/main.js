@@ -163,9 +163,28 @@ modalCloses.forEach((modalClose) => {
  }
 
 // SHOW SCROLL UP
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollTopBtn = document.getElementById("scrollTopBtn");
+  
+    // Quando o usuário rolar a página por 20px do topo, mostre o botão
+    window.onscroll = function() {scrollFunction()};
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    }
+  
+    // Quando o usuário clicar no botão, role instantaneamente para o topo da página
+    scrollTopBtn.onclick = function() {
+      window.scrollTo(0, 0);
+    }
+});
+
 
 // CONTATO
-
 document.querySelector('.contact_phone').addEventListener('click', function(e) {
     e.preventDefault();
     window.open('https://wa.me/5591981237058', '_blank');
