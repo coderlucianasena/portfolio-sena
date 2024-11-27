@@ -60,7 +60,6 @@ document.querySelectorAll('.portfolio__item').forEach((filterBtn) => {
     });
 });
 
-
 /*====== Link Active Work ======*/
 const linkWork = document.querySelectorAll('.work__item')
 
@@ -79,7 +78,7 @@ document.addEventListener("click", (e) => {
     }
 });
 
-function togglePortfolioPopup () {
+function togglePortfolioPopup() {
     document.querySelector('.portfolio__popup').classList.toggle('open');
 }
 
@@ -89,13 +88,16 @@ document.querySelector(".portfolio__popup-close").addEventListener("click", togg
 
 function portfolioItemDetails(portfolioItem) {
     // Seleciona a imagem
-    document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector("img").src;
+    const imgSrc = portfolioItem.querySelector("img").src;
+    document.querySelector(".pp__thumbnail img").src = imgSrc;
 
     // Seleciona o título
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
+    const title = portfolioItem.querySelector(".work__title").innerHTML;
+    document.querySelector(".portfolio__popup-subtitle span").innerHTML = title;
 
     // Seleciona os detalhes
-    document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+    const details = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+    document.querySelector(".portfolio__popup-body").innerHTML = details;
 }
 
 // Serviços Modal
@@ -122,64 +124,64 @@ modalCloses.forEach((modalClose) => {
 });
 
 // SWIPER TESTIMONIAL
- let swiper = new Swiper(".testimonials__container", {
-     spaceBetween: 24,
-     loop: true,
-     grabCursor: true,
-     pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-     },
-     breakpoints: {
-         576: {
-             slidesPerView: 2,
-         },
-         768: {
-             slidesPerView: 2,
-             spaceBetween: 48,
-         },
-     },
- });
+let swiper = new Swiper(".testimonials__container", {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 48,
+        },
+    },
+});
 
 // SCROLL SECTIONS ACTIVE LINK
- const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("section[id]");
 
- window.addEventListener("scroll", navHighlighter);
+window.addEventListener("scroll", navHighlighter);
 
- function navHighlighter() {
-     let scrollY = window.pageYOffset;
+function navHighlighter() {
+    let scrollY = window.pageYOffset;
 
-     sections.forEach(current => {
-         const sectionHeight = current.offsetHeight;
-         const sectionTop = current.offsetTop - 50,
-             sectionId = current.getAttribute("id");
-         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.add("active-link")
-         }
-         else {
-             document.querySelector(".nav li a[href*=" + sectionId + "]").classList.remove("active-link")
-         }
-     })
- }
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50,
+            sectionId = current.getAttribute("id");
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav li a[href*=" + sectionId + "]").classList.add("active-link")
+        }
+        else {
+            document.querySelector(".nav li a[href*=" + sectionId + "]").classList.remove("active-link")
+        }
+    })
+}
 
 // SHOW SCROLL UP
 document.addEventListener('DOMContentLoaded', function() {
     var scrollTopBtn = document.getElementById("scrollTopBtn");
-  
+
     // Quando o usuário rolar a página por 20px do topo, mostre o botão
     window.onscroll = function() {scrollFunction()};
-  
+
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
     }
-  
+
     // Quando o usuário clicar no botão, role instantaneamente para o topo da página
     scrollTopBtn.onclick = function() {
-      window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }
 });
 
