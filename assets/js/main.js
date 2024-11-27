@@ -196,22 +196,3 @@ document.querySelector('.contact_phone').addEventListener('click', function(e) {
     window.open('https://wa.me/5591981237058', '_blank');
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Para o primeiro caso (contact__card)
-    const contactEmail = document.querySelector('.contact_email');
-    if (contactEmail) {
-        contactEmail.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'mailto:contato@lucianasena.tech';
-        });
-    }
-
-    // Para o segundo caso (info__subtitle)
-    const emailLink = document.querySelector('.email-link');
-    if (emailLink) {
-        emailLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'mailto:contato@lucianasena.tech';
-        });
-    }
-});
