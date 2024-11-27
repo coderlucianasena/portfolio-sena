@@ -94,12 +94,8 @@ function portfolioItemDetails(portfolioItem) {
     // Seleciona o título
     document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
 
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".details__title").innerHTML;
-
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".details__description").innerHTML;
-
     // Seleciona os detalhes
-    //document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+    document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
 }
 
 // Serviços Modal
