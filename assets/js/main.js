@@ -85,20 +85,45 @@ function togglePortfolioPopup () {
 
 document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup)
 
-/*====== Details ======*/
+/*====== Portfolio Details ======*/
 
-function portfolioItemDetails(portfolioItem) {
-    // Seleciona a imagem
-    document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector("img").src;
+// Seleciona todos os cards de trabalho
+const workCards = document.querySelectorAll('.work__card');
+const portfolioModalClose = document.querySelector('.portfolio__popup-close');
+const portfolioPopup = document.querySelector('.portfolio__popup');
 
-    // Seleciona o título
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
+// Função para abrir o modal com os detalhes corretos
+function openPortfolioModal(card) {
+    // Seleciona a imagem do card clicado
+    const imgSrc = card.querySelector('img').src;
+    document.querySelector(".pp__thumbnail img").src = imgSrc;
 
-    // Seleciona os detalhes
-    document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+    // Seleciona o título do card clicado
+    const title = card.querySelector(".work__title").innerHTML;
+    document.querySelector(".portfolio__popup-subtitle span").innerHTML = title;
+
+    // Seleciona os detalhes do card clicado
+    const details = card.querySelector(".portfolio__item-details").innerHTML;
+    document.querySelector(".portfolio__popup-body").innerHTML = details;
+
+    // Mostra o modal
+    portfolioPopup.classList.add('active-modal');
 }
 
-// Serviços Modal
+// Adiciona o evento de clique a cada card
+workCards.forEach(card => {
+    const button = card.querySelector('.work__button');
+    button.addEventListener('click', () => {
+        openPortfolioModal(card);
+    });
+});
+
+// Fecha o modal do portfólio
+portfolioModalClose.addEventListener('click', () => {
+    portfolioPopup.classList.remove('active-modal');
+});
+
+/*====== Serviços Modal ======*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close');
