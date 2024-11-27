@@ -72,9 +72,9 @@ linkWork.forEach(l => l.addEventListener('click', activeWork));
 
 /*====== Work Popup ======*/
 document.addEventListener("click", (e) => {
-    if (e.target.classList.contains('work__button')) {
+    if (e.target.classList.contains('work__button') || e.target.closest('.work__button')) {
         togglePortfolioPopup();
-        portfolioItemDetails(e.target.parentElement);
+        portfolioItemDetails(e.target.closest('.work__card'));
     }
 });
 
@@ -89,15 +89,19 @@ document.querySelector(".portfolio__popup-close").addEventListener("click", togg
 function portfolioItemDetails(portfolioItem) {
     // Seleciona a imagem
     const imgSrc = portfolioItem.querySelector("img").src;
-    document.querySelector(".pp__thumbnail img").src = imgSrc;
+    document.querySelector(".portfolio__popup-img").src = imgSrc;
 
     // Seleciona o título
     const title = portfolioItem.querySelector(".work__title").innerHTML;
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML = title;
+    document.querySelector(".portfolio__popup-body .details__title").innerHTML = title;
 
-    // Seleciona os detalhes
-    const details = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
-    document.querySelector(".portfolio__popup-body").innerHTML = details;
+    // Seleciona a descrição
+    const description = portfolioItem.querySelector(".details__description").innerHTML;
+    document.querySelector(".portfolio__popup-body .details__description").innerHTML = description;
+
+    // Seleciona as informações detalhadas
+    const infoList = portfolioItem.querySelector(".details__info").innerHTML;
+    document.querySelector(".portfolio__popup-body .details__info").innerHTML = infoList;
 }
 
 // Serviços Modal
