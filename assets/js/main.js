@@ -1,4 +1,3 @@
-/*====== SHOW SIDEBAR ======*/
 document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('sidebar'),
         navToggle = document.getElementById('nav-toggle'),
@@ -204,10 +203,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Tenta abrir o cliente de e-mail
         window.location.href = mailtoLink;
         
-        // Se não abrir em 1 segundo, tenta abrir em uma nova aba
+        // Se não abrir em 1 segundo, tenta abrir em uma nova aba e exibe uma mensagem
         setTimeout(() => {
             if (!document.hasFocus()) {
                 window.open(mailtoLink, '_blank');
+                alert("Parece que você não tem um cliente de e-mail configurado. O link foi aberto em uma nova aba.");
             }
         }, 1000);
     }
@@ -224,14 +224,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactEmail = document.querySelector('.contact_email');
     if (contactEmail) {
         contactEmail.addEventListener('click', function(e) {
-            handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, gostaria de entrar em contato.');
+            handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, estou entrando em contato para tirar dúvidas.');
         });
     }
 
     const emailLink = document.querySelector('.email-link');
     if (emailLink) {
         emailLink.addEventListener('click', function(e) {
-            handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, gostaria de entrar em contato para tirar dúvidas.');
+            handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, estou entrando em contato para tirar dúvidas.');
         });
     }
 });
