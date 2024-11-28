@@ -219,4 +219,28 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         window.open('mailto:contato@lucianasena.tech', '_blank');
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const emailLink = document.querySelector('.email-link');
+        if (emailLink) {
+            emailLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const email = 'contato@lucianasena.tech';
+                const subject = 'Contato via Site';
+                const body = 'Olá, gostaria de entrar em contato para tirar dúvidas.';
+                
+                const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                // Tenta abrir o cliente de e-mail
+                window.location.href = mailtoLink;
+                
+                // Se não abrir em 1 segundo, tenta abrir em uma nova aba
+                setTimeout(() => {
+                    if (!document.hasFocus()) {
+                        window.open(mailtoLink, '_blank');
+                    }
+                }, 1000);
+            });
+        }
+    });
 });
