@@ -196,6 +196,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Função para lidar com links de e-mail
+    function handleEmailLink(e, email, subject, body) {
+        e.preventDefault();
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Tenta abrir o cliente de e-mail
+        window.location.href = mailtoLink;
+        
+        // Se não abrir em 1 segundo, tenta abrir em uma nova aba
+        setTimeout(() => {
+            if (!document.hasFocus()) {
+                window.open(mailtoLink, '_blank');
+            }
+        }, 1000);
+    }
+
     // CONTATO
     const contactPhone = document.querySelector('.contact_phone');
     if (contactPhone) {
@@ -205,42 +221,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const contactEmail = document.querySelector('.contact_email');
-        if (contactEmail) {
-            contactEmail.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.location.href = 'mailto:contato@lucianasena.tech';
-            });
-        }
-    });
+    const contactEmail = document.querySelector('.contact_email');
+    if (contactEmail) {
+        contactEmail.addEventListener('click', function(e) {
+            handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, gostaria de entrar em contato.');
+        });
+    }
 
-    document.querySelector('.contact_email').addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open('mailto:contato@lucianasena.tech', '_blank');
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const emailLink = document.querySelector('.email-link');
-        if (emailLink) {
-            emailLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                const email = 'contato@lucianasena.tech';
-                const subject = 'Contato via Site';
-                const body = 'Olá, gostaria de entrar em contato para tirar dúvidas.';
-                
-                const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                
-                // Tenta abrir o cliente de e-mail
-                window.location.href = mailtoLink;
-                
-                // Se não abrir em 1 segundo, tenta abrir em uma nova aba
-                setTimeout(() => {
-                    if (!document.hasFocus()) {
-                        window.open(mailtoLink, '_blank');
-                    }
-                }, 1000);
-            });
-        }
-    });
+    const emailLink = document.querySelector('.email-link');
+    if (emailLink) {
+        emailLink.addEventListener('click', function(e) {
+            handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, gostaria de entrar em contato para tirar dúvidas.');
+        });
+    }
 });
