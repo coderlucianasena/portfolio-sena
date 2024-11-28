@@ -205,19 +205,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const contactEmail = document.querySelector('.contact_email');
-    if (contactEmail) {
-        contactEmail.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'mailto:contato@lucianasena.tech';
-        });
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactEmail = document.querySelector('.contact_email');
+        if (contactEmail) {
+            contactEmail.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'mailto:contato@lucianasena.tech';
+            });
+        }
+    });
 
-    const emailLink = document.querySelector('.email-link');
-    if (emailLink) {
-        emailLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'mailto:contato@lucianasena.tech';
-        });
-    }
+    document.querySelector('.contact_email').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open('mailto:contato@lucianasena.tech', '_blank');
+    });
 });
