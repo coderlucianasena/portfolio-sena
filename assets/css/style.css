@@ -193,6 +193,7 @@
         background-color: var(--skin-color);
         text-align: center;
         margin: auto;
+        z-index: 10;
     }
 
     .nav__logo-text {

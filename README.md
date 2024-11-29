@@ -49,6 +49,10 @@ Para uma melhor experiência, recomenda-se usar navegadores modernos como Google
 
 **Nota:** Certifique-se de que o Live Server está rodando sempre que quiser visualizar ou trabalhar no projeto. O ícone do Live Server na barra inferior do VS Code indicará se o servidor está ativo.
 
+## Acessibilidade
+1. Feito Relatório de práticas de acessibilidade Web (WCAG 2.1 do W3C)
+2. Feita a inclusão do VLibras
+
 ## Mockup
 
 ### Versão Web
