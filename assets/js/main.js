@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navMenu = document.getElementById('sidebar'),
         navToggle = document.getElementById('nav-toggle'),
         navClose = document.getElementById('nav-close');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /*====== SKILLS TABS ======*/
     const tabs = document.querySelectorAll('[data-target]'),
-          tabContent = document.querySelectorAll('[data-content]');
+        tabContent = document.querySelectorAll('[data-content]');
 
     tabs.forEach(tab => {
         tab.addEventListener("click", () => {
@@ -107,10 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Serviços Modal
     const modalViews = document.querySelectorAll('.services__modal'),
-          modalBtns = document.querySelectorAll('.services__button'),
-          modalCloses = document.querySelectorAll('.services__modal-close');
+        modalBtns = document.querySelectorAll('.services__button'),
+        modalCloses = document.querySelectorAll('.services__modal-close');
 
-    let modal = function(modalClick) {
+    let modal = function (modalClick) {
         if (modalViews[modalClick]) modalViews[modalClick].classList.add('active-modal');
     }
 
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 50,
                 sectionId = current.getAttribute("id");
-            
+
             const navLink = document.querySelector(".nav li a[href*=" + sectionId + "]");
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (scrollTopBtn) {
         scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -199,10 +199,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleEmailLink(e, email, subject, body) {
         e.preventDefault();
         const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        
+
         // Tenta abrir o cliente de e-mail
         window.location.href = mailtoLink;
-        
+
         // Se não abrir em 1 segundo, tenta abrir em uma nova aba e exibe uma mensagem
         setTimeout(() => {
             if (!document.hasFocus()) {
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // CONTATO
     const contactPhone = document.querySelector('.contact_phone');
     if (contactPhone) {
-        contactPhone.addEventListener('click', function(e) {
+        contactPhone.addEventListener('click', function (e) {
             e.preventDefault();
             window.open('https://wa.me/5591981237058', '_blank');
         });
@@ -223,31 +223,100 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const contactEmail = document.querySelector('.contact_email');
     if (contactEmail) {
-        contactEmail.addEventListener('click', function(e) {
+        contactEmail.addEventListener('click', function (e) {
             handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, estou entrando em contato para tirar dúvidas.');
         });
     }
 
     const emailLink = document.querySelector('.email-link');
     if (emailLink) {
-        emailLink.addEventListener('click', function(e) {
+        emailLink.addEventListener('click', function (e) {
             handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, estou entrando em contato para tirar dúvidas.');
         });
     }
 
+    /* ========== Acessibilidade ========== */
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const accessibilityPanel = document.getElementById('accessibility-panel');
+    //     const accessibilityToggle = document.getElementById('accessibility-toggle');
+    //     const accessibilityOptions = document.getElementById('accessibility-options');
+    //     const contrastToggle = document.getElementById('contrast-toggle');
+    //     const fontIncrease = document.getElementById('font-increase');
+    //     const fontDecrease = document.getElementById('font-decrease');
+    //     const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    //     let fontSize = 16;
+
+        // Função para salvar preferências no localStorage
+        // function savePreference(key, value) {
+        //     localStorage.setItem(key, value);
+        // }
+
+        // Função para carregar preferências do localStorage
+        // function loadPreference(key, defaultValue) {
+        //     return localStorage.getItem(key) || defaultValue;
+        // }
+
+        // Carregar preferências salvas
+        // document.body.classList.toggle('high-contrast', loadPreference('highContrast', 'false') === 'true');
+        // document.body.classList.toggle('dark-mode', loadPreference('darkMode', 'false') === 'true');
+        // fontSize = parseInt(loadPreference('fontSize', '16'));
+        // document.body.style.fontSize = fontSize + 'px';
+
+        // accessibilityToggle.addEventListener('click', function (event) {
+        //     event.stopPropagation();
+        //     accessibilityOptions.classList.toggle('hidden');
+        // });
+
+        // contrastToggle.addEventListener('click', function () {
+        //     document.body.classList.toggle('high-contrast');
+        //     savePreference('highContrast', document.body.classList.contains('high-contrast'));
+        // });
+
+        // fontIncrease.addEventListener('click', function () {
+        //     fontSize = Math.min(fontSize + 2, 24);
+        //     document.body.style.fontSize = fontSize + 'px';
+        //     savePreference('fontSize', fontSize);
+        // });
+
+        // fontDecrease.addEventListener('click', function () {
+        //     fontSize = Math.max(fontSize - 2, 12);
+        //     document.body.style.fontSize = fontSize + 'px';
+        //     savePreference('fontSize', fontSize);
+        // });
+
+        // darkModeToggle.addEventListener('click', function () {
+        //     document.body.classList.toggle('dark-mode');
+        //     savePreference('darkMode', document.body.classList.contains('dark-mode'));
+        // });
+
+        // Fechar o painel quando clicar fora dele
+        // document.addEventListener('click', function (event) {
+        //     if (!accessibilityPanel.contains(event.target) && !accessibilityOptions.classList.contains('hidden')) {
+        //         accessibilityOptions.classList.add('hidden');
+        //     }
+        // });
+
+        // Prevenir que cliques dentro do painel o fechem
+    //     accessibilityOptions.addEventListener('click', function (event) {
+    //         event.stopPropagation();
+    //     });
+
+    //     console.log('Acessibilidade inicializada');
+    // });
     // JavaScript para gerenciar o consentimento de cookies
-//   function checkCookieConsent() {
-//     if (!localStorage.getItem('cookieConsent')) {
-//       document.getElementById('cookie-banner').style.display = 'block';
-//     }
-//   }
+    //   function checkCookieConsent() {
+    //     if (!localStorage.getItem('cookieConsent')) {
+    //       document.getElementById('cookie-banner').style.display = 'block';
+    //     }
+    //   }
 
-//   function acceptCookies() {
-//     localStorage.setItem('cookieConsent', 'true');
-//     document.getElementById('cookie-banner').style.display = 'none';
-//   }
+    //   function acceptCookies() {
+    //     localStorage.setItem('cookieConsent', 'true');
+    //     document.getElementById('cookie-banner').style.display = 'none';
+    //   }
 
-//   window.onload = checkCookieConsent;
+    //   window.onload = checkCookieConsent;
 
 });
 
