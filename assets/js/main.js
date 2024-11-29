@@ -234,4 +234,21 @@ document.addEventListener('DOMContentLoaded', function() {
             handleEmailLink(e, 'contato@lucianasena.tech', 'Contato via Site', 'Olá, estou entrando em contato para tirar dúvidas.');
         });
     }
+
+    // JavaScript para gerenciar o consentimento de cookies
+//   function checkCookieConsent() {
+//     if (!localStorage.getItem('cookieConsent')) {
+//       document.getElementById('cookie-banner').style.display = 'block';
+//     }
+//   }
+
+//   function acceptCookies() {
+//     localStorage.setItem('cookieConsent', 'true');
+//     document.getElementById('cookie-banner').style.display = 'none';
+//   }
+
+//   window.onload = checkCookieConsent;
+
 });
+
+
