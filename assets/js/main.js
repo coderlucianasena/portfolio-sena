@@ -235,6 +235,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM carregado");
+    
+        const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+        console.log("Número de links encontrados:", whatsappLinks.length);
+    
+        whatsappLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                console.log("Link clicado");
+                e.preventDefault(); // Previne o comportamento padrão do link
+    
+                const modelUrl = this.getAttribute('data-model-url');
+                console.log("URL do modelo:", modelUrl);
+    
+                const message = encodeURIComponent(`Olá! Gostaria de comprar esse modelo: ${modelUrl}`);
+                const whatsappLink = `https://wa.me/5591981237058?text=${message}`;
+    
+                console.log("Link do WhatsApp gerado:", whatsappLink);
+    
+                // Tenta abrir o link do WhatsApp em uma nova aba
+                const newWindow = window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+    
+                // Se window.open falhar (por exemplo, bloqueado por pop-up), redireciona na mesma aba
+                if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                    console.log("Falha ao abrir nova aba, redirecionando na mesma aba");
+                    window.location.href = whatsappLink;
+                }
+            });
+        });
+    });
+
+// Adicione aqui outras funções JavaScript que você possa ter
+
     /* ========== Acessibilidade ========== */
     // document.addEventListener('DOMContentLoaded', function () {
     //     const accessibilityPanel = document.getElementById('accessibility-panel');
@@ -247,57 +280,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //     let fontSize = 16;
 
-        // Função para salvar preferências no localStorage
-        // function savePreference(key, value) {
-        //     localStorage.setItem(key, value);
-        // }
+    // Função para salvar preferências no localStorage
+    // function savePreference(key, value) {
+    //     localStorage.setItem(key, value);
+    // }
 
-        // Função para carregar preferências do localStorage
-        // function loadPreference(key, defaultValue) {
-        //     return localStorage.getItem(key) || defaultValue;
-        // }
+    // Função para carregar preferências do localStorage
+    // function loadPreference(key, defaultValue) {
+    //     return localStorage.getItem(key) || defaultValue;
+    // }
 
-        // Carregar preferências salvas
-        // document.body.classList.toggle('high-contrast', loadPreference('highContrast', 'false') === 'true');
-        // document.body.classList.toggle('dark-mode', loadPreference('darkMode', 'false') === 'true');
-        // fontSize = parseInt(loadPreference('fontSize', '16'));
-        // document.body.style.fontSize = fontSize + 'px';
+    // Carregar preferências salvas
+    // document.body.classList.toggle('high-contrast', loadPreference('highContrast', 'false') === 'true');
+    // document.body.classList.toggle('dark-mode', loadPreference('darkMode', 'false') === 'true');
+    // fontSize = parseInt(loadPreference('fontSize', '16'));
+    // document.body.style.fontSize = fontSize + 'px';
 
-        // accessibilityToggle.addEventListener('click', function (event) {
-        //     event.stopPropagation();
-        //     accessibilityOptions.classList.toggle('hidden');
-        // });
+    // accessibilityToggle.addEventListener('click', function (event) {
+    //     event.stopPropagation();
+    //     accessibilityOptions.classList.toggle('hidden');
+    // });
 
-        // contrastToggle.addEventListener('click', function () {
-        //     document.body.classList.toggle('high-contrast');
-        //     savePreference('highContrast', document.body.classList.contains('high-contrast'));
-        // });
+    // contrastToggle.addEventListener('click', function () {
+    //     document.body.classList.toggle('high-contrast');
+    //     savePreference('highContrast', document.body.classList.contains('high-contrast'));
+    // });
 
-        // fontIncrease.addEventListener('click', function () {
-        //     fontSize = Math.min(fontSize + 2, 24);
-        //     document.body.style.fontSize = fontSize + 'px';
-        //     savePreference('fontSize', fontSize);
-        // });
+    // fontIncrease.addEventListener('click', function () {
+    //     fontSize = Math.min(fontSize + 2, 24);
+    //     document.body.style.fontSize = fontSize + 'px';
+    //     savePreference('fontSize', fontSize);
+    // });
 
-        // fontDecrease.addEventListener('click', function () {
-        //     fontSize = Math.max(fontSize - 2, 12);
-        //     document.body.style.fontSize = fontSize + 'px';
-        //     savePreference('fontSize', fontSize);
-        // });
+    // fontDecrease.addEventListener('click', function () {
+    //     fontSize = Math.max(fontSize - 2, 12);
+    //     document.body.style.fontSize = fontSize + 'px';
+    //     savePreference('fontSize', fontSize);
+    // });
 
-        // darkModeToggle.addEventListener('click', function () {
-        //     document.body.classList.toggle('dark-mode');
-        //     savePreference('darkMode', document.body.classList.contains('dark-mode'));
-        // });
+    // darkModeToggle.addEventListener('click', function () {
+    //     document.body.classList.toggle('dark-mode');
+    //     savePreference('darkMode', document.body.classList.contains('dark-mode'));
+    // });
 
-        // Fechar o painel quando clicar fora dele
-        // document.addEventListener('click', function (event) {
-        //     if (!accessibilityPanel.contains(event.target) && !accessibilityOptions.classList.contains('hidden')) {
-        //         accessibilityOptions.classList.add('hidden');
-        //     }
-        // });
+    // Fechar o painel quando clicar fora dele
+    // document.addEventListener('click', function (event) {
+    //     if (!accessibilityPanel.contains(event.target) && !accessibilityOptions.classList.contains('hidden')) {
+    //         accessibilityOptions.classList.add('hidden');
+    //     }
+    // });
 
-        // Prevenir que cliques dentro do painel o fechem
+    // Prevenir que cliques dentro do painel o fechem
     //     accessibilityOptions.addEventListener('click', function (event) {
     //         event.stopPropagation();
     //     });

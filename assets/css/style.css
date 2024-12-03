@@ -812,7 +812,7 @@ body.lang-pt .nav__link {
     padding: 0 0.8rem;
 }
 
- /* #### Work Section ####  */
+/* #### Work Section ####  */
     .work__container {
         /* display: grid; */
         grid-template-columns: repeat(3, 330px);
@@ -841,6 +841,10 @@ body.lang-pt .nav__link {
         background-color: var(--box-color);
         padding: 1.25rem;
         border-radius: .5rem;
+        position: relative;
+        /* Adicionado para posicionamento relativo */
+        padding-bottom: 3rem;
+        /* Espaço para os botões */
     }
 
     .portfolio__item-details {
@@ -865,6 +869,12 @@ body.lang-pt .nav__link {
         align-items: center;
         column-gap: .25rem;
         cursor: pointer;
+        position: absolute;
+        /* Posicionamento absoluto */
+        left: 1rem;
+        /* Alinha à esquerda */
+        bottom: 1rem;
+        /* Alinha na parte inferior */
     }
 
     .work__button-icon {
@@ -874,6 +884,32 @@ body.lang-pt .nav__link {
 
     .work__button:hover .work__button-icon {
         transform: translateX(.25rem);
+    }
+
+    .buy-button {
+        display: inline-flex;
+        align-items: center;
+        column-gap: .25rem;
+        color: var(--skin-color);
+        font-size: var(--small-font-size);
+        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.3s;
+        position: absolute;
+        /* Posicionamento absoluto */
+        right: 1.8rem;
+        /* Ajusta para a esquerda */
+        bottom: 1rem;
+        /* Alinha na parte inferior */
+    }
+
+    .buy-button .fas.fa-shopping-cart {
+        font-size: inherit;
+    }
+
+    .buy-button:hover .buy-button-icon {
+        transform: translateX(.25rem);
+        text-decoration: none;
     }
 
     /* Active Item Work */
@@ -1100,6 +1136,9 @@ body.lang-pt .nav__link {
         opacity: 1;
         visibility: visible;
     }
+
+
+
 
     /* #### Testimonial Section ####  */
     @media screen and (min-width: 992px) {
